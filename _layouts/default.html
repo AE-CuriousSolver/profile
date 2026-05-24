@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <div class="profile-container">
+    <!-- Left Sidebar Navigation -->
+    <aside class="profile-sidebar">
+      <div class="sidebar-content">
+        <div class="profile-photo">
+          <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Photo">
+        </div>
+        
+        <h1 class="profile-name">{{ site.author }}</h1>
+        <p class="profile-title">{{ site.job_title }}</p>
+
+
+        
+        <nav class="profile-nav">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+            <li><a href="{{ '/profile' | relative_url }}" class="{% if page.url contains 'profile' %}active{% endif %}">Profile</a></li>
+            <li><a href="{{ '/employment' | relative_url }}" class="{% if page.url contains 'employment' %}active{% endif %}">Professional Experience</a></li>
+            <li><a href="{{ '/experience' | relative_url }}" class="{% if page.url contains 'experience' %}active{% endif %}">Capabilities & Strengths</a></li>
+            <li><a href="{{ '/projects' | relative_url }}" class="{% if page.url contains 'projects' %}active{% endif %}">Projects</a></li>
+            <li><a href="{{ '/cv' | relative_url }}" class="{% if page.url contains 'cv' %}active{% endif %}">CV</a></li>
+          </ul>
+        </nav>
+
+
+        <div class="social-links">
+          <h3>Connect</h3>
+          <div class="contact-item">
+            <span class="label">Email:</span>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </div>
+          <div class="contact-item">
+            <span class="label">Phone:</span>
+            <a href="UK tel:{{ site.phone.uk }}">{{ site.phone.uk }}</a>
+            <a href="NZ tel:{{ site.phone.nz }}">{{ site.phone.nz }}</a>
+
+          </div>
+          <div class="social-icons">
+            {% if site.minima.social_links %}
+              {% for social in site.minima.social_links %}
+                {% if social.platform == 'github' %}
+                  <a href="{{ social.user_url }}" target="_blank" title="GitHub" rel="noopener noreferrer">
+                    <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+                  </a>
+                {% elsif social.platform == 'linkedin' %}
+                  <a href="{{ social.user_url }}" target="_blank" title="LinkedIn" rel="noopener noreferrer">
+                    <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="profile-main">
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>

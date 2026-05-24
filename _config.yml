@@ -1,0 +1,42 @@
+# Professional Portfolio Configuration
+title: Professional Portfolio
+description: >-
+  Professional portfolio showcasing employment history, experience and strengths
+baseurl: ""
+url: ""
+author: "Anna-Marie Edeleanu"
+email: "edeleanu.anna@hotmail.co.uk"
+phone: 
+  nz: "+64 (0) 20476-4118"
+  uk: "+44 (0) 7515-065824"
+job_title: "Software Engineer"
+degree: "MEng Mechanical Engineering - Cardiff University"
+
+# Theme & plugins
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  employment:
+    output: true
+    permalink: /employment/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Social links
+minima:
+  social_links:
+    - { platform: github, user_url: "https://github.com/AE-CuriousSolver" }
+    - { platform: linkedin, user_url: "www.linkedin.com/in/anna-marie-edeleanu-6b21b1142" }
+
+# Build settings
+markdown: kramdown
+future: false
+exclude: 
+  - node_modules
+  - vendor

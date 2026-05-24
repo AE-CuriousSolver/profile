@@ -1,0 +1,214 @@
+PROFESSIONAL PORTFOLIO - RESTRUCTURED ARCHITECTURE
+====================================================
+
+📁 Directory Layout
+──────────────────
+
+portfolio/
+├── 📄 _config.yml                    ← Site configuration (CUSTOMIZE FIRST)
+├── 📄 Gemfile                        ← Ruby dependencies
+├── 📄 .gitignore                     ← Git ignore rules
+├── 📄 README.md                      ← Detailed customization guide
+├── 📄 ARCHITECTURE.md                ← Architecture documentation
+├── 📄 STRUCTURE.txt                  ← This file
+│
+├── 📄 index.md                       ← Homepage (layout: home)
+├── 📄 employment.md                  ← Employment page (layout: employment)
+├── 📄 experience.md                  ← Skills page (layout: page)
+├── 📄 projects.md                    ← Projects page (layout: page)
+├── 📄 cv.md                          ← CV/Resume (layout: page)
+│
+├── 📂 _layouts/                      ← Page templates
+│   ├── default.html                  ← Base HTML structure
+│   ├── home.html                     ← Homepage with sidebar
+│   ├── page.html                     ← Standard pages
+│   └── employment.html               ← Employment with filters
+│
+├── 📂 _employment/                   ← Employment history (collection)
+│   ├── 01-senior-engineer.md
+│   ├── 02-fullstack-dev.md
+│   ├── 03-support-specialist.md
+│   └── 04-activity-coordinator.md
+│
+├── 📂 _projects/                     ← Personal projects (collection)
+│   ├── 01-task-cli.md
+│   ├── 02-data-dashboard.md
+│   └── 03-web-scraper.md
+│
+├── 📂 _data/                         ← (Optional) Structured data
+│   └── skills.yml                    ← (For future use)
+│
+└── 📂 assets/
+    ├── 📂 css/
+    │   ├── style.css                 ← Base styling
+    │   ├── sidebar.css               ← Sidebar + filter styles
+    │   └── main.css                  ← CSS manifest (imports)
+    │
+    ├── 📂 js/
+    │   └── filters.js                ← Employment filtering logic
+    │
+    ├── 📂 images/
+    │   ├── profile.jpg               ← ⭐ ADD YOUR PHOTO HERE
+    │   └── [other images]/
+    │
+    └── 📂 files/
+        └── resume.pdf                ← ⭐ ADD YOUR CV PDF HERE
+
+
+🎯 Key Features
+───────────────
+
+✅ Sidebar Layout
+   - Left sidebar with profile info, contact, navigation
+   - Sticky on desktop, responsive on mobile
+   - Profile photo, name, title, email, phone links
+
+✅ Employment Filtering
+   - Type: Technical, Customer Service, Childcare
+   - Time Period: Current, 1yr, 3yr, 5yr
+   - Reset to defaults (Technical only shown)
+   - Client-side JavaScript filtering
+
+✅ Responsive Design
+   - Desktop: Sidebar + content
+   - Tablet: Single column with sidebar
+   - Mobile: Stacked layout, touch-optimized
+
+✅ Two-Tier Skills
+   - Technical: Languages, frameworks, tools
+   - Professional: Communication, management, incident response, etc.
+
+✅ GitHub Integration
+   - Personal projects link to repos
+   - What/Why/Learnings/Futures format
+   - Easy to add new projects
+
+
+📝 Employment Format
+────────────────────
+
+Each employment file has frontmatter:
+
+---
+title: "Job Title"
+company: "Company Name"
+location: "City, State"
+start_date: "Jan 2023"
+end_date: "Present"
+type: "technical"              ← technical | customer-service | childcare
+period: "current"              ← current | 1year | 3years | 5years
+---
+
+Content with markdown...
+
+## Responsibilities & Achievements
+- Bullet point
+
+## What I Gained
+- Learning point
+
+
+🔍 Filtering Logic
+────────────────────
+
+Type Filter (Checkboxes):
+- technical
+- customer-service
+- childcare
+
+Period Filter (Dropdown):
+- "" (empty = all)
+- current
+- 1year
+- 3years
+- 5years
+
+Default: Shows technical entries only
+JavaScript updates display as filters change
+
+
+📋 Customization Priority
+──────────────────────────
+
+CRITICAL (Do First):
+☐ _config.yml - Your name, email, phone, job title, URL
+☐ assets/images/profile.jpg - Add your photo
+
+HIGH (Essential for portfolio to be useful):
+☐ index.md - Write your professional summary
+☐ experience.md - List your actual skills
+☐ _employment/ - Replace with your employment history
+☐ _projects/ - Add your GitHub projects
+☐ cv.md - Write your CV info
+
+MEDIUM (Nice to have):
+☐ assets/files/resume.pdf - Add downloadable resume
+☐ Color scheme - Customize colors if desired
+
+LOW (Optional):
+☐ _data/skills.yml - If you want structured data
+
+
+🚀 Deployment Steps
+────────────────────
+
+1. Update _config.yml with your info
+2. Add profile photo
+3. Customize pages with your content
+4. Test locally: bundle exec jekyll serve
+5. Create GitHub repo: yourusername.github.io
+6. Git push to GitHub
+7. Enable GitHub Pages (automatic for .github.io repos)
+8. Visit https://yourusername.github.io ✨
+
+
+💡 Tips
+───────
+
+• Employment filtering uses client-side JavaScript
+  (No server-side processing needed)
+
+• Profile sidebar is sticky on desktop, responsive on mobile
+  (Good UX on all devices)
+
+• Collections make it easy to add employment/projects
+  (Just create new .md files in folders)
+
+• All filters run instantly
+  (No page reloads, smooth user experience)
+
+• Sample data helps you understand the format
+  (Replace gradually as you add your content)
+
+
+🎨 Customization Examples
+──────────────────────────
+
+Change Colors:
+  Edit assets/css/style.css:
+  --primary-color: #2c3e50
+  --secondary-color: #3498db
+  --accent-color: #e74c3c
+
+Add New Employment:
+  Create _employment/05-my-role.md
+  Fill in frontmatter with your data
+
+Add New Project:
+  Create _projects/04-my-project.md
+  Link to GitHub repo
+
+
+✅ Everything Ready!
+─────────────────────
+
+Your restructured portfolio is complete with:
+- Sidebar layout ✓
+- Employment filtering ✓
+- Skills presentation ✓
+- Project showcase ✓
+- CV page ✓
+- Responsive design ✓
+- Sample content ✓
+
+Next: Follow customization checklist in README.md

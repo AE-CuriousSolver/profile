@@ -1,0 +1,10 @@
+{% assign start_year = include.item.start_date | split: ' ' | last %}
+{% assign end_year = include.item.end_date | split: ' ' | last %}
+{% assign start_month = include.item.start_date | split: ' ' | first %}
+{% assign end_month = include.item.end_date | split: ' ' | first %}
+
+{% if start_year == end_year %}
+  {{ start_month }} – {{ end_month }} {{ end_year }}
+{% else %}
+  {{ include.item.start_date }} – {{ include.item.end_date }}
+{% endif %}

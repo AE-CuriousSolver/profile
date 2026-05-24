@@ -1,0 +1,17 @@
+current directory: /Users/annabanana/demo/portfolio/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/annabanana/.rbenv/versions/3.1.4/bin/ruby -I /Users/annabanana/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/annabanana/demo/portfolio/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260521-9324-f78z1q sitelibdir\=./.gem.20260521-9324-f78z1q clean
+
+current directory: /Users/annabanana/demo/portfolio/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260521-9324-f78z1q sitelibdir\=./.gem.20260521-9324-f78z1q
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/annabanana/demo/portfolio/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260521-9324-f78z1q sitelibdir\=./.gem.20260521-9324-f78z1q install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20260521-9324-f78z1q

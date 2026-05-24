@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
+</div>
+
+<div class="employment-container">
+  <!-- Featured Jobs (Main Content) -->
+  <main class="employment-featured">
+    <h2>Technical Experience</h2>
+    <div class="featured-list" id="featuredList">
+      {% assign featured_jobs = site.employment | where: "featured", true %}
+      {% for item in featured_jobs %}
+        <div class="featured-card">
+          <div class="featured-header">
+            <h3 class="featured-title">{{ item.title }}</h3>
+            <p class="featured-company">{{ item.company }}</p>
+            <div class="featured-meta">
+              <span class="featured-location">📍 {{ item.location }}</span>
+              <span class="featured-dates">📅
+                {%- assign start_year = item.start_date | split: ' ' | last -%}
+                {%- assign end_year = item.end_date | split: ' ' | last -%}
+                {%- assign start_month = item.start_date | split: ' ' | first -%}
+                {%- assign end_month = item.end_date | split: ' ' | first -%}
+                {%- if start_year == end_year -%}
+                  {{ start_month }} – {{ end_month }} {{ end_year }}
+                {%- else -%}
+                  {{ item.start_date }} – {{ item.end_date }}
+                {%- endif -%}
+              </span>
+            </div>
+          </div>
+
+          <div class="featured-overview">
+            <p>{{ item.overview }}</p>
+          </div>
+
+          <div class="featured-body">
+            {% if item.content %}
+              {{ item.content }}
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+
+  <!-- Timeline Sidebar -->
+  <aside class="employment-sidebar" id="employmentSidebar">
+    <div class="timeline-toggle">
+      <button class="timeline-btn" id="timelineToggle">
+        📅 Employment Timeline
+        <span class="toggle-icon">▶</span>
+      </button>
+      <p class="timeline-subtext"><a href="{{ '/experience.html' | relative_url }}" class="skills-link">→ See what I brought and what I learnt</a></p>
+    </div>
+
+    <div class="timeline-panel" id="timelinePanel">
+      <div class="timeline-list" id="timelineList">
+        {% assign all_jobs = site.employment %}
+        {% for item in all_jobs %}
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4 class="timeline-role">{{ item.title }}</h4>
+              <p class="timeline-company">{{ item.company }}</p>
+              <p class="timeline-dates">
+                {%- assign start_year = item.start_date | split: ' ' | last -%}
+                {%- assign end_year = item.end_date | split: ' ' | last -%}
+                {%- assign start_month = item.start_date | split: ' ' | first -%}
+                {%- assign end_month = item.end_date | split: ' ' | first -%}
+                {%- if start_year == end_year -%}
+                  {{ start_month }} – {{ end_month }} {{ end_year }}
+                {%- else -%}
+                  {{ item.start_date }} – {{ item.end_date }}
+                {%- endif -%}
+              </p>
+              <p class="timeline-location">📍 {{ item.location }}</p>
+              <p class="timeline-overview">{{ item.overview }}</p>
+              
+              {% if item.learnings %}
+                <div class="timeline-learnings">
+                  <details class="learnings-dropdown">
+                    <summary>What I Gained</summary>
+                    <ul>
+                      {% for learning in item.learnings %}
+                        <li>{{ learning }}</li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </div>
+              {% endif %}
+              
+              {% if item.featured %}
+                <button class="timeline-show-more" data-job-id="{{ forloop.index }}" onclick="openTimelineModal(this)">Show More</button>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="timeline-close" id="timelineClose" onclick="closeTimeline()">✕ Close Timeline</button>
+    </div>
+  </aside>
+</div>
+
+<!-- Modal for Full Employment Details -->
+<div id="employmentModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeEmploymentModal()">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/employment-timeline.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/employment-timeline.css' | relative_url }}"">
