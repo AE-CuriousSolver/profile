@@ -42,4 +42,4 @@ I’m social and facilitative at heart, with a strong instinct for bringing peop
 
 ---
 
-[Back to home →](/)
+[Back to home →]({{ '/' | relative_url }})

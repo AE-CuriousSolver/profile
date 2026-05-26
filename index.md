@@ -38,4 +38,4 @@ Ready to work together? Let's connect!
 💼 **LinkedIn**: [View Profile](https://linkedin.com/in/anna-marie-edeleanu-6b21b1142)  
 🐙 **GitHub**: [View Projects](https://github.com/AE-CuriousSolver)
 
-[View my full profile →](/profile)
+[View my full profile →]({{ '/profile' | relative_url }})

@@ -77,7 +77,7 @@ portfolio/
    ```bash
    bundle exec jekyll serve
    ```
-   Visit `http://localhost:4000` in your browser
+   Visit `http://localhost:4000/profile/` in your browser
 
 3. **Customize configuration:**
    Edit `_config.yml` with your name, email, phone, job title, and GitHub username
