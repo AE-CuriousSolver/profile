@@ -1,214 +1,515 @@
-PROFESSIONAL PORTFOLIO - RESTRUCTURED ARCHITECTURE
-====================================================
+================================================================================
+PROFESSIONAL PORTFOLIO - PROJECT STRUCTURE GUIDE
+================================================================================
 
-📁 Directory Layout
-──────────────────
+This document provides a complete walkthrough of every file and directory in
+the portfolio project, explaining what each does and when/how to edit it.
 
-portfolio/
-├── 📄 _config.yml                    ← Site configuration (CUSTOMIZE FIRST)
-├── 📄 Gemfile                        ← Ruby dependencies
-├── 📄 .gitignore                     ← Git ignore rules
-├── 📄 README.md                      ← Detailed customization guide
-├── 📄 ARCHITECTURE.md                ← Architecture documentation
-├── 📄 STRUCTURE.txt                  ← This file
-│
-├── 📄 index.md                       ← Homepage (layout: home)
-├── 📄 employment.md                  ← Employment page (layout: employment)
-├── 📄 experience.md                  ← Skills page (layout: page)
-├── 📄 projects.md                    ← Projects page (layout: page)
-├── 📄 cv.md                          ← CV/Resume (layout: page)
-│
-├── 📂 _layouts/                      ← Page templates
-│   ├── default.html                  ← Base HTML structure
-│   ├── home.html                     ← Homepage with sidebar
-│   ├── page.html                     ← Standard pages
-│   └── employment.html               ← Employment with filters
-│
-├── 📂 _employment/                   ← Employment history (collection)
-│   ├── 01-senior-engineer.md
-│   ├── 02-fullstack-dev.md
-│   ├── 03-support-specialist.md
-│   └── 04-activity-coordinator.md
-│
-├── 📂 _projects/                     ← Personal projects (collection)
-│   ├── 01-task-cli.md
-│   ├── 02-data-dashboard.md
-│   └── 03-web-scraper.md
-│
-├── 📂 _data/                         ← (Optional) Structured data
-│   └── skills.yml                    ← (For future use)
-│
-└── 📂 assets/
-    ├── 📂 css/
-    │   ├── style.css                 ← Base styling
-    │   ├── sidebar.css               ← Sidebar + filter styles
-    │   └── main.css                  ← CSS manifest (imports)
-    │
-    ├── 📂 js/
-    │   └── filters.js                ← Employment filtering logic
-    │
-    ├── 📂 images/
-    │   ├── profile.jpg               ← ⭐ ADD YOUR PHOTO HERE
-    │   └── [other images]/
-    │
-    └── 📂 files/
-        └── resume.pdf                ← ⭐ ADD YOUR CV PDF HERE
+================================================================================
+📁 ROOT-LEVEL FILES
+================================================================================
 
+README.md
+─────────
+Purpose:       Main documentation for the portfolio project
+What's inside: Getting started guide, tech stack overview, customization
+               instructions, troubleshooting, deployment steps
+When to edit:  When adding new features, updating dependencies, or refining
+               instructions (rarely needed after initial setup)
+How to edit:   Use a text editor; Markdown formatting throughout
 
-🎯 Key Features
-───────────────
+STRUCTURE.txt (This File)
+──────────────────────────
+Purpose:       Detailed reference guide for the project structure
+What's inside: Descriptions of all files/folders and their purposes
+When to edit:  Only when new files are added to the project
+How to edit:   Plain text; update section headings and descriptions
 
-✅ Sidebar Layout
-   - Left sidebar with profile info, contact, navigation
-   - Sticky on desktop, responsive on mobile
-   - Profile photo, name, title, email, phone links
+Gemfile
+───────
+Purpose:       Ruby dependency management (like package.json for Node.js)
+What's inside: Jekyll, GitHub Pages, and other required gems with versions
+When to edit:  When adding new Ruby libraries/features (rare)
+How to edit:   Add/remove gem lines following the format: gem 'name', 'version'
+Important:     Run 'bundle install' after editing to update Gemfile.lock
 
-✅ Employment Filtering
-   - Type: Technical, Customer Service, Childcare
-   - Time Period: Current, 1yr, 3yr, 5yr
-   - Reset to defaults (Technical only shown)
-   - Client-side JavaScript filtering
+Gemfile.lock
+────────────
+Purpose:       Lock file that ensures consistent Ruby dependency versions
+What's inside: Exact versions of all installed gems and their dependencies
+When to edit:  Never manually edit; updated by 'bundle install'
+How to update: Delete and run 'bundle install' to reset if corrupted
 
-✅ Responsive Design
-   - Desktop: Sidebar + content
-   - Tablet: Single column with sidebar
-   - Mobile: Stacked layout, touch-optimized
+_config.yml
+───────────
+Purpose:       Jekyll configuration and site-wide settings
+What's inside: Site title, author info, URL, collections, markdown processor,
+               plugins, and custom variables available to all pages
+When to edit:  First thing to customize! Add your name, email, phone, title,
+               GitHub username, and other personal details
+How to edit:   YAML format (indentation matters!). Each key: value pair
+Important:     Changes require restarting `bundle exec jekyll serve` to take
+               effect
 
-✅ Two-Tier Skills
-   - Technical: Languages, frameworks, tools
-   - Professional: Communication, management, incident response, etc.
+.gitignore
+──────────
+Purpose:       Tells Git which files to exclude from version control
+What's inside: _site/ (built output), .bundle/, vendor/, node_modules/, etc.
+When to edit:  Only if you add new temporary/generated files to ignore
+How to edit:   Add new patterns, one per line
 
-✅ GitHub Integration
-   - Personal projects link to repos
-   - What/Why/Learnings/Futures format
-   - Easy to add new projects
+setup.sh
+────────
+Purpose:       Quick setup script for initial installation
+What's inside: Commands to install Ruby dependencies and other setup tasks
+When to edit:  If you add new setup steps for future users
+How to run:    bash setup.sh (from project root)
 
+================================================================================
+📂 CORE MARKDOWN PAGES (Top-Level)
+================================================================================
 
-📝 Employment Format
-────────────────────
+These are your main public-facing pages. Each can be edited independently.
 
-Each employment file has frontmatter:
+index.md
+────────
+Purpose:       Homepage (/)
+Current layout: home
+What's inside: Your professional introduction, summary, and call-to-action
+When to edit:  Update whenever you refine your professional summary
+How to edit:   Markdown with YAML frontmatter (---title---) at the top
+Note:          This is often the first thing visitors see
+
+employment.md
+──────────────
+Purpose:       Employment page (/employment/)
+Current layout: employment
+What's inside: Page title and filter controls; actual employment entries
+               come from _employment/ folder (pulled in by layout)
+When to edit:  Edit page title/description; don't edit the filter HTML
+               (edit in _layouts/employment.html instead)
+How to edit:   Markdown frontmatter; simple page structure
+
+experience.md
+──────────────
+Purpose:       Skills and experience page (/experience/)
+Current layout: page
+What's inside: Your technical skills, professional skills, certifications,
+               and any other expertise you want to showcase
+When to edit:  Add new skills, technologies, or achievements as you learn
+How to edit:   Markdown; organize with headers (## Technical, ## Professional)
+Note:          Best practices: Keep organized and grouped by category
+
+projects.md
+────────────
+Purpose:       Personal projects overview page (/projects/)
+Current layout: page
+What's inside: Introduction to your projects; actual project details come
+               from _projects/ folder
+When to edit:  Update project introduction and add any meta-information
+How to edit:   Markdown frontmatter plus body content
+
+cv.md
+─────
+Purpose:       CV/Resume page (/cv/)
+Current layout: page
+What's inside: Full curriculum vitae, education, professional summary,
+               and link to downloadable resume PDF
+When to edit:  Keep updated with new achievements, education, certifications
+How to edit:   Markdown; add resume PDF download link to assets/files/
+
+================================================================================
+📂 _LAYOUTS/ - Page Templates
+================================================================================
+
+These HTML/Liquid files define HOW pages are rendered. Edit when changing
+structure, adding features, or fixing layout issues.
+
+default.html
+─────────────
+Purpose:       Base template that all other layouts inherit from
+What's inside: DOCTYPE, <head>, <body> HTML; CSS/JS includes; footer; Google
+               Analytics (if configured)
+When to edit:  When changing global HTML structure, adding new global CSS,
+               or modifying footer
+How to edit:   HTML + Liquid tags; understand {{ page.title }}, {{ content }}
+Important:     Changes here affect ALL pages; be careful!
+
+home.html
+──────────
+Purpose:       Homepage layout with sidebar
+What's inside: Left sidebar (profile info, photo, contact links) + main content
+When to edit:  When adjusting sidebar sections, contact info display, or
+               rearranging homepage layout
+How to edit:   HTML + Liquid; sidebar pulls data from _config.yml
+Note:          Uses classes from sidebar.css for styling
+
+page.html
+──────────
+Purpose:       Standard page layout (used by experience.md, projects.md, cv.md)
+What's inside: Sidebar + content area; simple layout for text pages
+When to edit:  Rarely; only if changing how standard pages are structured
+How to edit:   HTML + Liquid
+Note:          Most customization happens in the content .md files, not here
+
+employment.html
+────────────────
+Purpose:       Employment timeline page with filtering
+What's inside: Sidebar + filter controls (type checkboxes, period dropdown) +
+               employment entries pulled from _employment/ collection
+When to edit:  When adding new filter types, changing filter behavior, or
+               updating employment display format
+How to edit:   HTML + Liquid; understand how filters work (see below)
+Important:     Filter attributes must match values in employment YAML files
+
+### How Filters Work (in employment.html):
+
+1. Type Filter (checkboxes):
+   - Values: technical, customer-service, childcare
+   - Stored in <input data-type="value"> attributes
+   - JavaScript reads these and hides/shows employment items
+
+2. Period Filter (dropdown):
+   - Values: "" (all), current, 1year, 3years, 5years
+   - Stored in <option value=""> attributes
+   - Default: Shows only current entries
+
+3. Employment items must have matching data attributes:
+   <div class="employment-item" data-type="technical" data-period="current">
+
+================================================================================
+📂 _EMPLOYMENT/ - Employment History Collection
+================================================================================
+
+This folder contains individual employment records. Each file represents
+one job/role. Jekyll automatically collects these and makes them available
+to templates.
+
+Naming convention: NN-descriptive-name.md (e.g., 01-senior-engineer.md)
+The "NN" number determines display order (lowest first).
+
+### Employment File Template:
 
 ---
-title: "Job Title"
+title: "Job Title Here"
 company: "Company Name"
 location: "City, State"
 start_date: "Jan 2023"
-end_date: "Present"
-type: "technical"              ← technical | customer-service | childcare
-period: "current"              ← current | 1year | 3years | 5years
+end_date: "Present" or "Dec 2024"
+type: "technical"              # Choose: technical | customer-service | childcare
+period: "current"              # Choose: current | 1year | 3years | 5years
 ---
 
-Content with markdown...
-
 ## Responsibilities & Achievements
-- Bullet point
+- What you did or accomplished
+- Key projects or results
+- Technologies used
 
 ## What I Gained
-- Learning point
+- Skills or knowledge developed
+- Professional growth
+- Interesting learnings
 
+### To Add Employment:
 
-🔍 Filtering Logic
-────────────────────
+1. Create file: _employment/NN-job-name.md
+2. Fill in frontmatter (the --- section) with accurate dates and types
+3. Write markdown content describing the role
+4. Save and test locally (bundle exec jekyll serve)
+5. Verify filters work correctly (employment should appear when you check
+   the matching type and period filters)
 
-Type Filter (Checkboxes):
-- technical
-- customer-service
-- childcare
+### Important Filter Values:
 
-Period Filter (Dropdown):
-- "" (empty = all)
-- current
-- 1year
-- 3years
-- 5years
+TYPE: Must be one of:
+- technical          (software engineering, data science, technical roles)
+- customer-service   (support, customer success, service roles)
+- childcare          (childcare, teaching, educational roles)
 
-Default: Shows technical entries only
-JavaScript updates display as filters change
+PERIOD: Must be one of:
+- current            (current job or recent: 0-6 months ago)
+- 1year              (1 year or less, but not current)
+- 3years             (1-3 years ago)
+- 5years             (3-5 years ago)
+- (leave blank)      (older than 5 years or if not using period filter)
 
+================================================================================
+📂 _PROJECTS/ - Personal Projects Collection
+================================================================================
 
-📋 Customization Priority
-──────────────────────────
+Similar to _employment/, this folder contains personal/portfolio projects.
+Each file is a project showcasing your work.
 
-CRITICAL (Do First):
-☐ _config.yml - Your name, email, phone, job title, URL
-☐ assets/images/profile.jpg - Add your photo
+Naming convention: NN-project-name.md (e.g., 01-task-cli.md)
 
-HIGH (Essential for portfolio to be useful):
-☐ index.md - Write your professional summary
-☐ experience.md - List your actual skills
-☐ _employment/ - Replace with your employment history
-☐ _projects/ - Add your GitHub projects
-☐ cv.md - Write your CV info
+### Project File Template:
 
-MEDIUM (Nice to have):
-☐ assets/files/resume.pdf - Add downloadable resume
-☐ Color scheme - Customize colors if desired
+---
+title: "Project Name"
+description: "One-line project description"
+github_url: "https://github.com/yourusername/repo-name"
+technologies: ["Language1", "Framework1", "Tool1"]
+---
 
-LOW (Optional):
-☐ _data/skills.yml - If you want structured data
+## What It Is
+Paragraph describing what the project does and its purpose.
 
+## Why I Built It
+Motivation, problem it solves, or learning goal.
 
-🚀 Deployment Steps
-────────────────────
+## What I Learned
+Key skills, technologies, or lessons gained.
 
-1. Update _config.yml with your info
-2. Add profile photo
-3. Customize pages with your content
-4. Test locally: bundle exec jekyll serve
-5. Create GitHub repo: yourusername.github.io
-6. Git push to GitHub
-7. Enable GitHub Pages (automatic for .github.io repos)
-8. Visit https://yourusername.github.io ✨
+## Future Improvements
+Ideas for enhancement or next steps.
 
+### To Add a Project:
 
-💡 Tips
-───────
+1. Create file: _projects/NN-project-name.md
+2. Fill in YAML frontmatter with accurate details
+3. Write markdown content describing the project
+4. Include link to GitHub repo
+5. Save and test locally
 
-• Employment filtering uses client-side JavaScript
-  (No server-side processing needed)
+================================================================================
+📂 _INCLUDES/ - Reusable Snippets
+================================================================================
 
-• Profile sidebar is sticky on desktop, responsive on mobile
-  (Good UX on all devices)
+Small HTML/Liquid files that can be included in layouts using {% include %}.
+Use these for repeated components.
 
-• Collections make it easy to add employment/projects
-  (Just create new .md files in folders)
+(Example files may include: header.html, footer.html, sidebar-profile.html)
 
-• All filters run instantly
-  (No page reloads, smooth user experience)
+When to use: When you want to reuse a chunk of HTML across multiple layouts
+How to edit: Create new files as needed; edit existing ones carefully (changes
+            affect all places where they're included)
 
-• Sample data helps you understand the format
-  (Replace gradually as you add your content)
+================================================================================
+📂 _PLUGINS/ - Jekyll Plugins
+================================================================================
 
+Custom Jekyll plugins that extend functionality beyond built-in Jekyll.
 
-🎨 Customization Examples
-──────────────────────────
+When to add: When you need custom Liquid filters, tags, or generators
+How to add:  Create .rb files in this folder; they're automatically loaded
+Note:        Most standard portfolios don't need plugins; use sparingly
 
-Change Colors:
-  Edit assets/css/style.css:
-  --primary-color: #2c3e50
-  --secondary-color: #3498db
-  --accent-color: #e74c3c
+================================================================================
+📂 _DATA/ - Structured Data (Optional)
+================================================================================
 
-Add New Employment:
-  Create _employment/05-my-role.md
-  Fill in frontmatter with your data
+YAML/JSON files for storing structured data instead of hardcoding it.
+Useful for skills lists, certifications, or any repeating data.
 
-Add New Project:
-  Create _projects/04-my-project.md
-  Link to GitHub repo
+Example use: _data/skills.yml for a comprehensive skills list that gets
+            displayed on experience.md
 
+How to use:  Reference in templates with {{ site.data.filename.key }}
+When to use: When you have data that repeats across multiple pages or changes
+            frequently
 
-✅ Everything Ready!
-─────────────────────
+================================================================================
+📂 ASSETS/ - Static Files
+================================================================================
 
-Your restructured portfolio is complete with:
-- Sidebar layout ✓
-- Employment filtering ✓
-- Skills presentation ✓
-- Project showcase ✓
-- CV page ✓
-- Responsive design ✓
-- Sample content ✓
+All CSS, JavaScript, images, and downloadable files live here.
 
-Next: Follow customization checklist in README.md
+assets/css/
+───────────
+style.css
+- Purpose:      Main stylesheet for the entire site
+- What's inside: CSS variables (colors), typography, layouts, component styles
+- When to edit:  For global design changes, color scheme, fonts, spacing
+- Key variables: --primary-color, --secondary-color, --accent-color
+
+sidebar.css
+- Purpose:      Sidebar-specific styling
+- What's inside: Sidebar layout, profile section styles, responsive adjustments
+- When to edit:  To change sidebar width, colors, or responsive breakpoints
+- Width setting: .profile-sidebar { flex: 0 0 300px; } ← change 300px
+
+main.css
+- Purpose:      CSS manifest/imports
+- What's inside: @import statements for other CSS files
+- When to edit:  When adding new CSS files that need to be included
+
+assets/js/
+──────────
+filters.js
+- Purpose:      Client-side employment filtering logic
+- What's inside: JavaScript that shows/hides employment items based on filters
+- When to edit:  When changing filter behavior, adding new filter types, or
+                 fixing filter bugs
+- How it works:  Reads data-type and data-period attributes from HTML elements
+
+assets/images/
+──────────────
+profile.jpg
+- Purpose:      Your profile photo displayed in the sidebar
+- Format:       Recommended 400x400px square, professional headshot
+- When to add:  During initial setup
+- How to add:   Save your photo as profile.jpg in this folder
+
+(Other images)
+- Use this folder for any screenshots, project images, or other visuals
+
+assets/files/
+─────────────
+resume.pdf
+- Purpose:      Downloadable resume/CV in PDF format
+- When to add:  After creating your resume
+- How to link:  In cv.md or any page, use: [Download Resume](/assets/files/resume.pdf)
+
+================================================================================
+📂 _SITE/ - Build Output (DO NOT EDIT)
+================================================================================
+
+Purpose:        Folder where Jekyll builds the final static website
+What's inside:  Generated HTML files, CSS, JavaScript ready for deployment
+When it changes: Automatically updated when you run 'bundle exec jekyll serve'
+                 or build the site
+Important:      NEVER manually edit files here; always edit source files
+When to delete:  If something seems broken, delete this folder and rebuild
+How to delete:   rm -rf _site/ then run 'bundle exec jekyll serve' again
+
+================================================================================
+📂 VENDOR/ - External Dependencies
+================================================================================
+
+Purpose:        Bundler-managed Ruby gems (dependencies) installed locally
+When it changes: Automatically created/updated by 'bundle install'
+When to delete:  Safe to delete; run 'bundle install' to restore
+Important:      Usually ignored in Git (see .gitignore)
+
+================================================================================
+📂 .BUNDLE/ - Bundler Configuration
+================================================================================
+
+Purpose:        Local bundler settings and configuration
+When it changes: Automatically created by 'bundle install'
+Important:      Usually ignored in Git; don't manually edit
+
+================================================================================
+QUICK REFERENCE: What to Edit for Common Tasks
+================================================================================
+
+I WANT TO...                          EDIT THIS FILE:
+────────────────────────────────────  ──────────────────────────────
+Update my name/email/title            _config.yml
+Add a new job/employment entry        Create new file in _employment/
+Add a personal project                Create new file in _projects/
+Update my skills                      experience.md
+Write/update homepage                 index.md
+Change colors/theme                   assets/css/style.css
+Fix sidebar width                     assets/css/sidebar.css
+Update fonts                          assets/css/style.css
+Fix broken employment filters         _layouts/employment.html or check
+                                      employment YAML frontmatter
+Add resume PDF                        Place file in assets/files/resume.pdf
+Add profile photo                     Place file as assets/images/profile.jpg
+Change how employment items display   _layouts/employment.html
+Add new pages                         Create new .md file in root folder
+Fix responsive layout on mobile       assets/css/sidebar.css and style.css
+Update CV/Resume page                 cv.md
+
+================================================================================
+COMMON WORKFLOWS
+================================================================================
+
+### Workflow 1: Initial Setup
+
+1. Edit _config.yml → add your name, email, phone, GitHub username, URL
+2. Add assets/images/profile.jpg → your profile photo (400x400px)
+3. Edit index.md → your professional summary
+4. Edit experience.md → your skills
+5. Replace _employment/ files → add your actual job history
+6. Replace _projects/ files → link your GitHub projects
+7. Test locally: bundle exec jekyll serve
+8. Deploy: git push to GitHub
+
+### Workflow 2: Adding a New Job
+
+1. Create file: _employment/NN-job-name.md (use next number)
+2. Add YAML frontmatter with: title, company, location, dates, type, period
+3. Write markdown content
+4. Test locally: bundle exec jekyll serve → verify filters work
+5. Commit and push to GitHub
+
+### Workflow 3: Updating Skills
+
+1. Edit experience.md
+2. Add new technologies, certifications, or skills under appropriate headings
+3. Test locally: bundle exec jekyll serve
+4. Commit and push to GitHub
+
+### Workflow 4: Fixing Display Issues
+
+1. Check browser developer tools (F12)
+2. Look for CSS errors → check assets/css/ files
+3. Look for JavaScript errors → check filters.js
+4. Look for HTML errors → check _layouts/ files
+5. Check YAML syntax → run `bundle exec jekyll serve` (error messages appear here)
+6. Hard refresh browser (Ctrl+Shift+R or Cmd+Shift+R)
+
+### Workflow 5: Deploying to GitHub Pages
+
+1. Create GitHub repo: yourusername.github.io
+2. Git push entire project: git push -u origin main
+3. Enable GitHub Pages (usually automatic for .github.io repos)
+4. Wait 1-2 minutes
+5. Visit https://yourusername.github.io
+
+================================================================================
+JEKYLL BASICS FOR REFERENCE
+================================================================================
+
+### Markdown + Frontmatter
+
+Every content file has YAML frontmatter:
+
+---
+title: "My Page"
+layout: "page"
+---
+
+Your markdown content here.
+
+### Liquid Variables
+
+In templates, access data with {{ }}:
+
+{{ page.title }}          ← from frontmatter
+{{ site.title }}          ← from _config.yml
+{{ site.author }}         ← custom variable from _config.yml
+{{ content }}             ← page content
+
+### Collections
+
+Jekyll treats _employment/ and _projects/ as collections.
+Access them with: site.employment and site.projects
+
+### Looping
+
+{% for job in site.employment %}
+  <div>{{ job.title }}</div>
+{% endfor %}
+
+### Conditionals
+
+{% if page.type == "technical" %}
+  Show technical jobs
+{% endif %}
+
+================================================================================
+RESOURCES FOR FURTHER LEARNING
+================================================================================
+
+- Jekyll Documentation: https://jekyllrb.com/docs/
+- Liquid Template Language: https://shopify.dev/liquid
+- Markdown Guide: https://www.markdownguide.org/
+- YAML Syntax: https://yaml.org/
+- CSS Grid: https://web.dev/learn/css/grid/
+- Flexbox: https://web.dev/learn/css/flexbox/
+- GitHub Pages: https://docs.github.com/en/pages/
+
+================================================================================
