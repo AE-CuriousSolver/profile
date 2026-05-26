@@ -208,11 +208,17 @@ bundle install
 bundle exec jekyll serve
 ```
 
+Go to http://localhost:4000/profile/
+
 Then test:
 - All pages load correctly
 - Employment filters work (type and period filters)
 - Links are functional
 - Mobile responsiveness (test at different screen sizes)
+
+If you don't want the 'profile' as the base url do
+``` bundle exec jekyll serve --baseurl ""```
+
 
 ### Responsive Design Breakpoints
 

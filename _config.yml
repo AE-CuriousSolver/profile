@@ -2,8 +2,9 @@
 title: Professional Portfolio
 description: >-
   Professional portfolio showcasing employment history, experience and strengths
-baseurl: "https://AE-CuriousSolver.github.io"
-url: "/profile"
+url: "https://AE-CuriousSolver.github.io"
+baseurl: "/profile"
+permalink: /:basename
 author: "Anna-Marie Edeleanu"
 email: "edeleanu.anna@hotmail.co.uk"
 phone: 
@@ -40,3 +41,4 @@ future: false
 exclude: 
   - node_modules
   - vendor
+
