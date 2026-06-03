@@ -11,12 +11,23 @@ title: Capabilities & Strengths
 - Experience working within distributed systems, legacy integration, and modular service architectures
 
 
+
+
+
 ## Tools & Technologies
 **Languages & Frameworks:** Java, Spring, Guice, Python, C++, React, OpenAPI / Swagger, Webhooks
+
 **Databases & Cloud:** SQL, Postgres, AWS
+
 **DevOps & Build Tools:** Docker, Jenkins, Maven, Gradle
+
 **Observability:** Grafana, Sentry, Instana, Humio
+
 **Collaboration:** Jira, Confluence, Agile Methodologies
+
+
+
+
 
 ## Applied Experience
 
@@ -31,6 +42,9 @@ Created onboarding documentation, internal guides, and training resources across
 
 **Event Hosting & Community Building –** 
 Experience organising and hosting events, including roles such as Hockey Social Secretary and facilitating community-focused activities. Developed confidence in coordination, engagement, and creating inclusive environments.
+
+
+
 
 
 ## Ways I Work
