@@ -35,7 +35,7 @@ Ready to work together? Let's connect!
 
 📧 **Email**: [{{ site.email }}](mailto:{{ site.email }})  
 📞 **Phone**: [{{ site.phone.uk }}](tel:{{ site.phone.uk }})  | [{{ site.phone.nz }}](tel:{{ site.phone.nz }})  
-💼 **LinkedIn**: [View Profile](https://linkedin.com/in/anna-marie-edeleanu-6b21b1142)  
-🐙 **GitHub**: [View Projects](https://github.com/AE-CuriousSolver)
+💼 **LinkedIn**: [View Profile]({{ site.linkedin_url }})  
+🐙 **GitHub**: [View Projects]({{ site.github_url }})
 
 [View my full profile →]({{ '/profile' | relative_url }})

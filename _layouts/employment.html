@@ -2,14 +2,15 @@
 layout: default
 ---
 
-<div class="page-header">
+<div class="wrap page">
+<header class="page-header">
   <h1>{{ page.title }}</h1>
-  <p>{{ page.description }}</p>
-</div>
+  <p class="page-description">{{ page.description }}</p>
+</header>
 
 <div class="employment-container">
   <!-- Featured Jobs (Main Content) -->
-  <main class="employment-featured">
+  <div class="employment-featured">
     <h2>Technical Experience</h2>
     <div class="featured-list" id="featuredList">
       {% assign featured_jobs = site.employment | where: "featured", true %}
@@ -46,7 +47,7 @@ layout: default
         </div>
       {% endfor %}
     </div>
-  </main>
+  </div>
 
   <!-- Timeline Sidebar -->
   <aside class="employment-sidebar" id="employmentSidebar">
@@ -55,7 +56,7 @@ layout: default
         📅 Employment Timeline
         <span class="toggle-icon">▶</span>
       </button>
-      <p class="timeline-subtext"><a href="{{ '/experience.html' | relative_url }}" class="skills-link">→ Explore my technical toolkit</a></p>
+      <p class="timeline-subtext"><a href="{{ '/experience' | relative_url }}" class="skills-link">→ Explore my technical toolkit</a></p>
     </div>
 
     <div class="timeline-panel" id="timelinePanel">
@@ -104,6 +105,7 @@ layout: default
     </div>
   </aside>
 </div>
+</div>
 
 <!-- Modal for Full Employment Details -->
 <div id="employmentModal" class="modal" style="display: none;">
@@ -114,4 +116,4 @@ layout: default
 </div>
 
 <script src="{{ '/assets/js/employment-timeline.js' | relative_url }}"></script>
-<link rel="stylesheet" href="{{ '/assets/css/employment-timeline.css' | relative_url }}"">
+<link rel="stylesheet" href="{{ '/assets/css/employment-timeline.css' | relative_url }}">
