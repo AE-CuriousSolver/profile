@@ -1,7 +1,7 @@
 # Professional Portfolio Configuration
-title: Professional Portfolio
+title: Anna-Marie Edeleanu
 description: >-
-  Professional portfolio showcasing employment history, experience and strengths
+  Experience, skills and projects of Anna-Marie Edeleanu, technical consultant with a background in backend engineering.
 url: "https://AE-CuriousSolver.github.io"
 baseurl: "/profile"
 permalink: /:basename
@@ -10,11 +10,18 @@ email: "edeleanu.anna@hotmail.co.uk"
 phone: 
   nz: "+64 (0) 20476-4118"
   uk: "+44 (0) 7515-065824"
-job_title: "Software Engineer"
+job_title: "Technical Consultant"
 degree: "MEng Mechanical Engineering - Cardiff University"
 
-# Theme & plugins
+# Links
+linkedin_url: "https://www.linkedin.com/in/anna-marie-edeleanu-6b21b1142"
+github_url: "https://github.com/AE-CuriousSolver"
+cv_file: "/assets/files/A Edeleanu CV .pdf"
+
+# Theme (layouts are all overridden; kept so GitHub Pages does not fall back to its default theme)
 theme: minima
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -29,16 +36,15 @@ collections:
     output: true
     permalink: /projects/:path/
 
-# Social links
-minima:
-  social_links:
-    - { platform: github, user_url: "https://github.com/AE-CuriousSolver" }
-    - { platform: linkedin, user_url: "www.linkedin.com/in/anna-marie-edeleanu-6b21b1142" }
-
 # Build settings
 markdown: kramdown
 future: false
-exclude: 
+exclude:
   - node_modules
   - vendor
+  - README.md
+  - STRUCTURE.txt
+  - setup.sh
+  - Gemfile
+  - Gemfile.lock
 

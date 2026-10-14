@@ -43,5 +43,5 @@ They are intentionally not “finished products” in a production sense, but wo
 
 ## Explore My GitHub
 
-For more projects and contributions, visit my [GitHub profile](https://github.com/yourusername).
+For more projects and contributions, visit my [GitHub profile]({{ site.github_url }}).
 
