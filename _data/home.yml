@@ -48,6 +48,13 @@ experience:
   heading: "Recent experience"
   link_text: "See all experience"
   items:
+    - name: "Take In"
+      meta: "Technical Consultant · Auckland · 2026"
+      points:
+        - "Conducted a full project review across hardware, app, cloud and data"
+        - "Designed breath metrics end to end, from sensor to screen"
+        - "Helped the founders lead technical decisions with confidence"
+      tags: ["Systems design", "Data design", "Advisory"]
     - name: "Starling Bank"
       meta: "Software Engineer · London · 2021–2023"
       points:
@@ -62,13 +69,6 @@ experience:
         - "Led backend work on a custom switch service"
         - "Built a reusable data-mapping tool that cut manual work"
       tags: ["Microservices", "Integrations", "Spring"]
-    - name: "Engineering roots"
-      meta: "MEng Mechanical Engineering · Cardiff · 2014–2018"
-      points:
-        - "Designed and prototyped an adjustable pressure valve for armoured vehicles"
-        - "Supported field testing and data analysis in defence engineering"
-        - "Led a final-year project building an autonomous LEGO mini-factory"
-      tags: ["Hardware", "Testing", "Systems"]
 
 skills:
   eyebrow: "What I'm good at"

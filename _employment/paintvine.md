@@ -4,7 +4,7 @@ company: "Paintvine"
 location: "Queenstown and Auckland"
 start_date: "July 2024"
 sort_key: "2024-07"   # year-month, used to order roles newest first
-end_date: "Present"
+end_date: "October 2026"
 type: "entertainer"
 featured: false
 overview: "Hosting paint-and-sip events, guiding mixed groups through a painting while keeping the evening relaxed and social."
