@@ -1,0 +1,91 @@
+# Homepage words. Edit the text here; the layout lives in _layouts/home.html.
+# Draft wording, taken from the old site and LinkedIn until the content pass.
+
+intro:
+  kicker: "Technical Consultant · System analysis and design · Backend engineering"
+  heading: "Hi, I'm Anna-Marie."
+  text: >-
+    I trained as a mechanical engineer, then spent four years building backend
+    systems at two UK banks. These days I help people understand how their
+    technology fits together. This page is the detail behind my CV: where I've
+    worked, what I can do and what I've been building.
+  status: "Based in Auckland · open to contract roles"
+
+metrics:
+  - value: "4+"
+    count: 4
+    label: "years building backend systems"
+  - value: "2"
+    count: 2
+    label: "UK banks: Starling and Lloyds"
+  - value: "MEng"
+    label: "Mechanical Engineering, Cardiff"
+  - value: "UK · EU"
+    label: "working rights, based in NZ"
+
+how_i_work:
+  eyebrow: "How I work"
+  heading: "Translating between people and technology"
+  aside: "and I'm on your side"
+  text: >-
+    I think visually, so expect diagrams, analogies and plain English. The aim
+    is for people to understand their own systems well enough to make confident
+    decisions without me.
+
+experience:
+  eyebrow: "Experience highlights"
+  heading: "Recent experience"
+  link_text: "See all experience"
+  items:
+    - name: "Starling Bank"
+      meta: "Software Engineer · London · 2021–2023"
+      points:
+        - "Designed Banking-as-a-Service onboarding APIs for partner banks"
+        - "Redesigned a rule engine for dynamic fraud monitoring"
+        - "Worked across engineering, product, compliance and operations"
+      tags: ["API design", "FinCrime", "Java"]
+    - name: "Lloyds Banking Group"
+      meta: "Software Engineer · London · 2019–2020"
+      points:
+        - "Built microservices for fraud detection inside legacy systems"
+        - "Led backend work on a custom switch service"
+        - "Built a data mapping tool for system integrations"
+      tags: ["Integrations", "Spring", "Microservices"]
+    - name: "Engineering roots"
+      meta: "MEng Mechanical Engineering · Cardiff"
+      points:
+        - "Designed and prototyped a pressure valve for armoured vehicles"
+        - "Field testing and data analysis in defence engineering"
+        - "Machine learning research support, University of Auckland"
+      tags: ["Hardware", "Testing", "Data"]
+
+skills:
+  eyebrow: "What I'm good at"
+  heading: "Skills, sketched"
+  items:
+    - sketch: api
+      title: "APIs and integrations"
+      text: "Request in, response out, and every partner understands the contract."
+    - sketch: systems
+      title: "System design"
+      text: "From the big picture down to the edge cases that break things."
+    - sketch: data
+      title: "Data that makes sense"
+      text: "How it's captured, calculated and shown, with the assumptions written down."
+    - sketch: docs
+      title: "Docs and diagrams"
+      text: "So a team understands their own systems without needing me."
+
+looking_for:
+  eyebrow: "What I'm looking for"
+  statement: "Contract work and conversations where technology and people need to fit together."
+  highlight: "technology and people"
+  points:
+    - "Part-time or contract technical consulting"
+    - "Early-stage teams who want an independent technical view"
+    - "Work shaping APIs, integrations and data systems"
+    - "Australian and NZ time zones, with UK and EU working rights"
+
+contact:
+  heading: "Get in touch"
+  text: "Happy to chat about a role, a project, or anything on this page."
