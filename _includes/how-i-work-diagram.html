@@ -1,3 +1,4 @@
+{%- assign d = site.data.home.how_i_work.diagram -%}
 <svg class="diagram diagram-wide drawable" viewBox="0 0 820 230" role="img" aria-labelledby="hiw-title hiw-desc">
   <title id="hiw-title">You, me and your tech</title>
   <desc id="hiw-desc">You, on the left, and your tech, on the right, with me in the middle translating what you need and what's possible in both directions.</desc>
@@ -9,17 +10,17 @@
   <path class="sk" d="M524 104 C560 92 580 96 602 100 M590 90 L604 100 L590 110" stroke="#127C80" stroke-width="2.5" style="--len:200;--d:1.5s"/>
   <path class="sk" d="M602 136 C572 144 556 142 524 134 M538 124 L522 134 L538 144" stroke="#127C80" stroke-width="2.5" style="--len:200;--d:1.7s"/>
   <g class="lbl" style="--d:.4s" fill="#1B2740">
-    <text x="115" y="114" text-anchor="middle" font-size="30">You</text>
-    <text x="115" y="146" text-anchor="middle" font-size="20" fill="#4B5670">people · teams</text>
-    <text x="410" y="126" text-anchor="middle" font-size="32" fill="#EB6446">Me</text>
-    <text x="705" y="114" text-anchor="middle" font-size="30">Your tech</text>
-    <text x="705" y="146" text-anchor="middle" font-size="20" fill="#4B5670">APIs · data · cloud</text>
+    <text x="115" y="114" text-anchor="middle" font-size="30">{{ d.left }}</text>
+    <text x="115" y="146" text-anchor="middle" font-size="20" fill="#4B5670">{{ d.left_subtitle }}</text>
+    <text x="410" y="126" text-anchor="middle" font-size="32" fill="#EB6446">{{ d.middle }}</text>
+    <text x="705" y="114" text-anchor="middle" font-size="30">{{ d.right }}</text>
+    <text x="705" y="146" text-anchor="middle" font-size="20" fill="#4B5670">{{ d.right_subtitle }}</text>
   </g>
   <g class="lbl" style="--d:1.9s" fill="#127C80" font-size="21">
-    <text x="257" y="78" text-anchor="middle">what you need</text>
-    <text x="257" y="176" text-anchor="middle">plain English</text>
-    <text x="563" y="78" text-anchor="middle">clear specs</text>
-    <text x="563" y="176" text-anchor="middle">what's possible</text>
+    <text x="257" y="78" text-anchor="middle">{{ d.you_to_me }}</text>
+    <text x="257" y="176" text-anchor="middle">{{ d.me_to_you }}</text>
+    <text x="563" y="78" text-anchor="middle">{{ d.me_to_tech }}</text>
+    <text x="563" y="176" text-anchor="middle">{{ d.tech_to_me }}</text>
   </g>
 </svg>
 
@@ -34,16 +35,16 @@
   <path class="sk" d="M140 336 C134 370 136 392 140 426 M130 414 L140 428 L150 414" stroke="#127C80" stroke-width="2.5" style="--len:200;--d:1.5s"/>
   <path class="sk" d="M200 426 C206 392 204 370 200 338 M190 350 L200 336 L210 350" stroke="#127C80" stroke-width="2.5" style="--len:200;--d:1.7s"/>
   <g class="lbl" style="--d:.4s" fill="#1B2740">
-    <text x="170" y="56" text-anchor="middle" font-size="30">You</text>
-    <text x="170" y="86" text-anchor="middle" font-size="20" fill="#4B5670">people · teams</text>
-    <text x="170" y="279" text-anchor="middle" font-size="32" fill="#EB6446">Me</text>
-    <text x="170" y="480" text-anchor="middle" font-size="30">Your tech</text>
-    <text x="170" y="510" text-anchor="middle" font-size="20" fill="#4B5670">APIs · data · cloud</text>
+    <text x="170" y="56" text-anchor="middle" font-size="30">{{ d.left }}</text>
+    <text x="170" y="86" text-anchor="middle" font-size="20" fill="#4B5670">{{ d.left_subtitle }}</text>
+    <text x="170" y="279" text-anchor="middle" font-size="32" fill="#EB6446">{{ d.middle }}</text>
+    <text x="170" y="480" text-anchor="middle" font-size="30">{{ d.right }}</text>
+    <text x="170" y="510" text-anchor="middle" font-size="20" fill="#4B5670">{{ d.right_subtitle }}</text>
   </g>
   <g class="lbl" style="--d:1.9s" fill="#127C80" font-size="21">
-    <text x="126" y="166" text-anchor="end">what you need</text>
-    <text x="214" y="166">plain English</text>
-    <text x="126" y="388" text-anchor="end">clear specs</text>
-    <text x="214" y="388">what's possible</text>
+    <text x="126" y="166" text-anchor="end">{{ d.you_to_me }}</text>
+    <text x="214" y="166">{{ d.me_to_you }}</text>
+    <text x="126" y="388" text-anchor="end">{{ d.me_to_tech }}</text>
+    <text x="214" y="388">{{ d.tech_to_me }}</text>
   </g>
 </svg>

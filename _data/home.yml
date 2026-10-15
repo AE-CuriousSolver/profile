@@ -1,36 +1,47 @@
 # Homepage words. Edit the text here; the layout lives in _layouts/home.html.
-# Draft wording, taken from the old site and LinkedIn until the content pass.
 
 intro:
   kicker: "Technical Consultant · System analysis and design · Backend engineering"
   heading: "Hi, I'm Anna-Marie."
   text: >-
     I trained as a mechanical engineer, then spent four years building backend
-    systems at two UK banks. These days I help people understand how their
-    technology fits together. This page is the detail behind my CV: where I've
-    worked, what I can do and what I've been building.
-  status: "Based in Auckland · open to contract roles"
+    systems at Lloyds and Starling. Now I help people understand how their
+    technology fits together, from what a product captures to what its users
+    actually see. This page is the detail behind my CV: where I've worked, how
+    I work and what I'm building.
+  status: "Open to remote contracts · AU/NZ time zones"
 
+# "count" makes the number count up when it scrolls into view; leave it out for text values
 metrics:
-  - value: "4+"
+  - value: "4"
     count: 4
-    label: "years building backend systems"
+    label: "years in software engineering"
   - value: "2"
     count: 2
     label: "UK banks: Starling and Lloyds"
   - value: "MEng"
     label: "Mechanical Engineering, Cardiff"
   - value: "UK · EU"
-    label: "working rights, based in NZ"
+    label: "working rights"
 
 how_i_work:
   eyebrow: "How I work"
   heading: "Translating between people and technology"
   aside: "and I'm on your side"
   text: >-
-    I think visually, so expect diagrams, analogies and plain English. The aim
-    is for people to understand their own systems well enough to make confident
-    decisions without me.
+    I listen first, then explain with diagrams, analogies and plain English, so
+    you understand your own systems well enough to decide with confidence.
+  # Handwritten labels on the diagram; keep each to about 3 words
+  diagram:
+    left: "You"
+    left_subtitle: "people · teams"
+    middle: "Me"
+    right: "Your tech"
+    right_subtitle: "APIs · data · cloud"
+    you_to_me: "what you need"
+    me_to_you: "plain English"
+    me_to_tech: "clear specs"
+    tech_to_me: "what's possible"
 
 experience:
   eyebrow: "Experience highlights"
@@ -40,24 +51,24 @@ experience:
     - name: "Starling Bank"
       meta: "Software Engineer · London · 2021–2023"
       points:
-        - "Designed Banking-as-a-Service onboarding APIs for partner banks"
-        - "Redesigned a rule engine for dynamic fraud monitoring"
-        - "Worked across engineering, product, compliance and operations"
-      tags: ["API design", "FinCrime", "Java"]
+        - "Designed Banking-as-a-Service onboarding APIs for partner clients"
+        - "Led the fraud rules engine redesign on a £143B platform"
+        - "Shaped requirements with clients, compliance and fraud investigators"
+      tags: ["API design", "Fraud systems", "Java"]
     - name: "Lloyds Banking Group"
       meta: "Software Engineer · London · 2019–2020"
       points:
-        - "Built microservices for fraud detection inside legacy systems"
+        - "Built fraud detection microservices alongside a legacy monolith"
         - "Led backend work on a custom switch service"
-        - "Built a data mapping tool for system integrations"
-      tags: ["Integrations", "Spring", "Microservices"]
+        - "Built a reusable data-mapping tool that cut manual work"
+      tags: ["Microservices", "Integrations", "Spring"]
     - name: "Engineering roots"
-      meta: "MEng Mechanical Engineering · Cardiff"
+      meta: "MEng Mechanical Engineering · Cardiff · 2014–2018"
       points:
-        - "Designed and prototyped a pressure valve for armoured vehicles"
-        - "Field testing and data analysis in defence engineering"
-        - "Machine learning research support, University of Auckland"
-      tags: ["Hardware", "Testing", "Data"]
+        - "Designed and prototyped an adjustable pressure valve for armoured vehicles"
+        - "Supported field testing and data analysis in defence engineering"
+        - "Led a final-year project building an autonomous LEGO mini-factory"
+      tags: ["Hardware", "Testing", "Systems"]
 
 skills:
   eyebrow: "What I'm good at"
@@ -65,27 +76,28 @@ skills:
   items:
     - sketch: api
       title: "APIs and integrations"
-      text: "Request in, response out, and every partner understands the contract."
+      text: "Clear contracts between systems, so every partner knows what to expect."
     - sketch: systems
       title: "System design"
       text: "From the big picture down to the edge cases that break things."
     - sketch: data
       title: "Data that makes sense"
-      text: "How it's captured, calculated and shown, with the assumptions written down."
+      text: "From capture to calculation to what people see, with assumptions written down."
     - sketch: docs
       title: "Docs and diagrams"
-      text: "So a team understands their own systems without needing me."
+      text: "So a team understands its own systems without needing me."
 
 looking_for:
   eyebrow: "What I'm looking for"
-  statement: "Contract work and conversations where technology and people need to fit together."
-  highlight: "technology and people"
+  statement: "Contract work shaping systems and data, where the technology and the people using it need to meet."
+  # Must appear word for word in the statement; it gets a highlighter mark
+  highlight: "technology and the people"
   points:
-    - "Part-time or contract technical consulting"
-    - "Early-stage teams who want an independent technical view"
-    - "Work shaping APIs, integrations and data systems"
-    - "Australian and NZ time zones, with UK and EU working rights"
+    - "Multi-month contracts shaping APIs, integrations and data systems"
+    - "Technical business analysis, growing toward solutions engineering"
+    - "Short reviews helping non-technical founders see the whole picture"
+    - "Remote work in AU/NZ time zones · UK and EU working rights"
 
 contact:
   heading: "Get in touch"
-  text: "Happy to chat about a role, a project, or anything on this page."
+  text: "Happy to talk about a role, a project or anything on this page."

@@ -44,7 +44,8 @@
     });
   }, { threshold: 0.6 });
 
+  // Numbers already on screen keep their final value; only ones further down count up.
   document.querySelectorAll('[data-count]').forEach(function (el) {
-    countObserver.observe(el);
+    if (el.getBoundingClientRect().top >= fold) countObserver.observe(el);
   });
 })();

@@ -1,15 +1,13 @@
 # Professional Portfolio Configuration
 title: Anna-Marie Edeleanu
 description: >-
-  Experience, skills and projects of Anna-Marie Edeleanu, technical consultant with a background in backend engineering.
+  Experience, skills and projects of Anna-Marie Edeleanu, a technical consultant
+  with a background in backend engineering at Starling and Lloyds.
 url: "https://AE-CuriousSolver.github.io"
 baseurl: "/profile"
 permalink: /:basename
 author: "Anna-Marie Edeleanu"
 email: "edeleanu.anna@hotmail.co.uk"
-phone: 
-  nz: "+64 (0) 20476-4118"
-  uk: "+44 (0) 7515-065824"
 job_title: "Technical Consultant"
 degree: "MEng Mechanical Engineering - Cardiff University"
 
