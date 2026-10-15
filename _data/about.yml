@@ -54,6 +54,8 @@ toolkit:
       items: ["SQL", "PostgreSQL", "AWS"]
     - label: "Build and run"
       items: ["Docker", "Kubernetes", "Jenkins", "Maven", "Gradle", "Grafana", "Prometheus", "Sentry", "Instana", "Humio"]
+    - label: "Diagramming"
+      items: ["Miro", "Lucidchart", "draw.io", "FigJam"]
     - label: "Design and collaboration"
       items: ["Figma", "Notion", "Confluence", "Jira", "Attio", "GitHub", "Agile"]
     - label: "AI tools"

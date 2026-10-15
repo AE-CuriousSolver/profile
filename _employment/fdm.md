@@ -7,30 +7,20 @@ sort_key: "2019-04"   # year-month, used to order roles newest first
 end_date: "June 2019"
 type: "technical"
 featured: true
-overview: "Completed an intensive IT consultant training programme focused on preparing graduates for industry roles in software development and consulting."
-detail: "Completed an intensive IT consultant training programme focused on preparing graduates for industry roles in software development and consulting.
- The programme combined technical software engineering training with professional skills development in communication, presentation, and client-facing scenarios."
+overview: "An intensive training programme preparing graduates for software development and consulting roles, which led to my placement at Lloyds."
 skills:
-  - "Java, object-oriented programming fundamentals"
-  - "Web development (HTML, CSS)"
-  - "Software testing principles (Mockito)"
+  - "Java and object-oriented programming"
+  - "Software testing principles, including Mockito"
+  - "Web fundamentals with HTML and CSS"
   - "Basic system design and cloud concepts"
-
 ---
 
-## Programme Details  
-- Structured training in Java development and object-oriented programming principles
-- Web development fundamentals using HTML and CSS
-- Introduction to software testing practices, including unit testing concepts and Mockito
-- Exposure to basic system design and software engineering workflows
-- Professional development covering communication, presentations, and simulated consulting environments
-- Cohort-based learning with iterative assessments and practical exercises
+## Responsibilities
+- Completed structured Java and object-oriented programming training with regular assessments
+- Practised communication and presentations in simulated consulting environments
+- Worked through practical exercises as part of a graduate cohort
 
-## What I Gained
-- Foundational confidence in Java and object-oriented programming concepts
-- Exposure to structured software engineering workflows and development methodologies
-- Experience communicating technical concepts through presentations and collaborative exercises
-- Experience adapting quickly to new technical concepts in a fast-paced learning environment
-- Increased confidence in collaborative learning and structured technical training
-- Awareness of consulting-style communication and client-facing expectations
-
+## What I gained
+- Foundational confidence in Java
+- Experience picking up new technical concepts quickly
+- Early awareness of client-facing communication

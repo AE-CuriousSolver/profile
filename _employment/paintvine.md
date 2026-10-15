@@ -1,16 +1,16 @@
 ---
 title: "Event Host and Artist"
 company: "Paintvine"
-location: "Queenstown | Auckland"
+location: "Queenstown and Auckland"
 start_date: "July 2024"
 sort_key: "2024-07"   # year-month, used to order roles newest first
 end_date: "Present"
 type: "entertainer"
 featured: false
-overview: "Host paint and sip events, guiding participants through creative experiences. Create welcoming environments that encourage artistic expression and social connection."
+overview: "Hosting paint-and-sip events, guiding mixed groups through a painting while keeping the evening relaxed and social."
 learnings:
-  - "Developed strong facilitation and instructional abilities for creative activities"
-  - "Enhanced ability to create inclusive environments for diverse participants"
-  - "Strengthened public speaking and audience engagement skills"
-  - "Gained experience managing events and coordinating logistics"
+  - "Explaining step by step to people with very different confidence levels"
+  - "Creating a welcoming space where everyone feels able to take part"
+  - "Public speaking and holding a room's attention"
+  - "Running events end to end, from setup to logistics"
 ---

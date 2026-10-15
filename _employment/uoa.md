@@ -7,24 +7,17 @@ sort_key: "2018-09"   # year-month, used to order roles newest first
 end_date: "September 2018"
 type: "technical"
 featured: true
-overview: "Supported a short-term research project focused on exploratory reinforcement learning approaches for postoperative recovery prediction, working with Python-based experimentation."
+overview: "A short research project exploring reinforcement learning for predicting postoperative recovery, using Python."
 skills:
- - "Supported exploratory development of reinforcement learning models for postoperative recovery prediction"
- - "Worked in Python on early-stage machine learning research pipelines including data preparation and evaluation"
-detail: "Supported a short-term research project focused on exploratory reinforcement learning approaches for postoperative recovery prediction.
- Work involved assisting with Python-based experimentation, data preparation, and engagement with academic research processes including literature review and evaluation planning."
+  - "Supported early reinforcement learning models for postoperative recovery prediction"
+  - "Prepared and structured datasets in Python for machine learning experiments"
 ---
 
-## Responsibilities 
+## Responsibilities
+- Assisted with feature selection and data preprocessing
+- Read academic literature on reinforcement learning to inform the approach
 
-- Supported preparation and structuring of datasets for machine learning experimentation 
-- Assisted with feature selection and data preprocessing for model development
-- Engaged with academic literature to support understanding of reinforcement learning concepts and application
-
-
-## What I Gained
-
-- Exposure to foundational machine learning concepts, particularly reinforcement learning and classification approaches
-- Practical experience using Python in a research and data analysis environment
-- Familiarity with academic research processes, including literature review and hypothesis development
-- Awareness of experimental setup challenges and the importance of structured, reproducible workflows
+## What I gained
+- Foundations in reinforcement learning and classification approaches
+- Experience of academic research, from literature review to hypotheses
+- Why structured, reproducible workflows matter in experiments

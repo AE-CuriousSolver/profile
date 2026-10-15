@@ -7,11 +7,9 @@ sort_key: "2023-11"   # year-month, used to order roles newest first
 end_date: "January 2024"
 type: "entertainer"
 featured: false
-overview: "Guided participants on zipline eco-tours through the Queenstown canopy, combining safety, adventure, and storytelling to create memorable guest experiences. Hosted and supported guests throughout the tour while sharing knowledge about the local environment, wildlife, and surrounding area."
+overview: "Guided groups through the Queenstown canopy on zipline eco-tours, combining safety, adventure and storytelling about the local environment."
 learnings:
- - "Developed strong safety awareness and risk management skills through operational procedures and equipment checks"
- - "Strengthened confidence leading and entertaining groups while creating fun, engaging, and memorable experiences"
- - "Enhanced ability to reassure nervous participants and adapt to different personalities and confidence levels"
- - "Gained experience creating positive, memorable experiences in a fast-paced outdoor tourism environment"
- - "Built strong teamwork and communication skills while working in high-responsibility environments"
+  - "Owned safety checks and procedures where mistakes weren't an option"
+  - "Reassured nervous guests and adapted to very different confidence levels"
+  - "Kept groups engaged and entertained while staying focused on safety"
 ---
