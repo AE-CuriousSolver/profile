@@ -3,6 +3,7 @@ title: "Hospitality Superstar"
 company: "Wai Group"
 location: "Queenstown"
 start_date: "February 2024"
+sort_key: "2024-02"   # year-month, used to order roles newest first
 end_date: "July 2024"
 type: "customer-service"
 featured: false

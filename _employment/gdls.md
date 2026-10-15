@@ -3,6 +3,7 @@ title: "Graduate Intern"
 company: "General Dynamics Land Systems"
 location: "Cardiff"
 start_date: "August 2018"
+sort_key: "2018-08"   # year-month, used to order roles newest first
 end_date: "December 2018"
 type: "technical"
 featured: true

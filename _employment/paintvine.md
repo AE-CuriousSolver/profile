@@ -3,6 +3,7 @@ title: "Event Host and Artist"
 company: "Paintvine"
 location: "Queenstown | Auckland"
 start_date: "July 2024"
+sort_key: "2024-07"   # year-month, used to order roles newest first
 end_date: "Present"
 type: "entertainer"
 featured: false

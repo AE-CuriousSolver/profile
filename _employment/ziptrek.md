@@ -3,6 +3,7 @@ title: "Zipline Guide"
 company: "Ziptrek Eco Tours"
 location: "Queenstown"
 start_date: "November 2023"
+sort_key: "2023-11"   # year-month, used to order roles newest first
 end_date: "January 2024"
 type: "entertainer"
 featured: false

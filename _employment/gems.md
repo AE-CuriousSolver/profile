@@ -3,6 +3,7 @@ title: "ECE Teacher"
 company: "Gems Miro"
 location: "Queenstown"
 start_date: "July 2024"
+sort_key: "2024-07"   # year-month, used to order roles newest first
 end_date: "December 2024"
 type: "childcare"
 featured: false

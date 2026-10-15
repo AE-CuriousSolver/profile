@@ -3,6 +3,7 @@ title: "Retail Assistant"
 company: "Sedae"
 location: "Auckland"
 start_date: "October 2024"
+sort_key: "2024-10"   # year-month, used to order roles newest first
 end_date: "January 2025"
 type: "customer-service"
 featured: false

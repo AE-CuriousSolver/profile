@@ -3,6 +3,7 @@ title: "Remote Research Assistant"
 company: "University of Auckland"
 location: "Remote"
 start_date: "September 2018"
+sort_key: "2018-09"   # year-month, used to order roles newest first
 end_date: "September 2018"
 type: "technical"
 featured: true

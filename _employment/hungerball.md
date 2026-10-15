@@ -3,6 +3,7 @@ title: "Game Facilitator"
 company: "Hungerball"
 location: "Auckland"
 start_date: "September 2025"
+sort_key: "2025-09"   # year-month, used to order roles newest first
 end_date: "Present"
 type: "entertainer"
 featured: false

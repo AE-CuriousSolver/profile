@@ -1,10 +1,14 @@
-{% assign start_year = include.item.start_date | split: ' ' | last %}
-{% assign end_year = include.item.end_date | split: ' ' | last %}
-{% assign start_month = include.item.start_date | split: ' ' | first %}
-{% assign end_month = include.item.end_date | split: ' ' | first %}
-
-{% if start_year == end_year %}
-  {{ start_month }} – {{ end_month }} {{ end_year }}
-{% else %}
+{%- comment -%}
+  Prints a role's dates, e.g. "March 2021 – September 2023", or "July – December 2024" when both are in the same year.
+  Usage: {% include employment-date-format.html item=role %}
+{%- endcomment -%}
+{%- assign start_year = include.item.start_date | split: ' ' | last -%}
+{%- assign end_year = include.item.end_date | split: ' ' | last -%}
+{%- assign start_month = include.item.start_date | split: ' ' | first -%}
+{%- if include.item.start_date == include.item.end_date -%}
+  {{ include.item.start_date }}
+{%- elsif start_year == end_year -%}
+  {{ start_month }} – {{ include.item.end_date }}
+{%- else -%}
   {{ include.item.start_date }} – {{ include.item.end_date }}
-{% endif %}
+{%- endif -%}

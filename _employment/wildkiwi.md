@@ -3,6 +3,7 @@ title: "Sales and Operations Support"
 company: "Wild Kiwi Tours"
 location: "Auckland"
 start_date: "November 2025"
+sort_key: "2025-11"   # year-month, used to order roles newest first
 end_date: "April 2026"
 type: "customer-service"
 featured: false

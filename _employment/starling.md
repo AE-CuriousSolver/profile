@@ -3,6 +3,7 @@ title: "Software Engineer"
 company: "Starling Bank"
 location: "London"
 start_date: "March 2021"
+sort_key: "2021-03"   # year-month, used to order roles newest first
 end_date: "September 2023"
 featured: true
 overview: "Worked across backend services and internal full-stack engineering within a modular monolith architecture, contributing across the full lifecycle from development and deployment through to operational support and system investigations in a fast-paced fintech environment."

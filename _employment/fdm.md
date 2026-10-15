@@ -3,6 +3,7 @@ title: "IT Consultant Trainee"
 company: "FDM Group"
 location: "London"
 start_date: "April 2019"
+sort_key: "2019-04"   # year-month, used to order roles newest first
 end_date: "June 2019"
 type: "technical"
 featured: true

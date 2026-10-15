@@ -1,119 +1,113 @@
 ---
 layout: default
 ---
+{%- assign words = site.data.experience -%}
+{%- assign roles = site.employment | sort: "sort_key" | reverse -%}
+{%- assign technical_roles = roles | where: "featured", true -%}
+{%- assign other_roles = roles | where_exp: "role", "role.featured != true" -%}
 
 <div class="wrap page">
-<header class="page-header">
-  <h1>{{ page.title }}</h1>
-  <p class="page-description">{{ page.description }}</p>
-</header>
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <p class="page-description">{{ words.intro }}</p>
+    <nav class="jump-links" aria-label="On this page">
+      <a href="#technical">{{ words.technical.heading }}</a>
+      <a href="#beyond-tech">{{ words.beyond.heading }}</a>
+      <a href="#projects">{{ words.projects.heading }}</a>
+    </nav>
+  </header>
 
-<div class="employment-container">
-  <!-- Featured Jobs (Main Content) -->
-  <div class="employment-featured">
-    <h2>Technical Experience</h2>
-    <div class="featured-list" id="featuredList">
-      {% assign featured_jobs = site.employment | where: "featured", true %}
-      {% for item in featured_jobs %}
-        <div class="featured-card">
-          <div class="featured-header">
-            <h3 class="featured-title">{{ item.title }}</h3>
-            <p class="featured-company">{{ item.company }}</p>
-            <div class="featured-meta">
-              <span class="featured-location">📍 {{ item.location }}</span>
-              <span class="featured-dates">📅
-                {%- assign start_year = item.start_date | split: ' ' | last -%}
-                {%- assign end_year = item.end_date | split: ' ' | last -%}
-                {%- assign start_month = item.start_date | split: ' ' | first -%}
-                {%- assign end_month = item.end_date | split: ' ' | first -%}
-                {%- if start_year == end_year -%}
-                  {{ start_month }} – {{ end_month }} {{ end_year }}
-                {%- else -%}
-                  {{ item.start_date }} – {{ item.end_date }}
-                {%- endif -%}
-              </span>
+  <section id="technical" class="exp-section" aria-labelledby="technical-heading">
+    <h2 id="technical-heading">{{ words.technical.heading }}</h2>
+    <ol class="timeline">
+      {%- for role in technical_roles %}
+      <li class="timeline-entry">
+        <p class="timeline-when">{% include employment-date-format.html item=role %}</p>
+        <article class="card role">
+          <header>
+            <h3>{{ role.title }}</h3>
+            <p class="role-meta">{{ role.company }} · {{ role.location }}</p>
+          </header>
+          <p class="role-overview">{{ role.overview }}</p>
+          {%- if role.skills %}
+          <ul class="role-points">
+            {%- for point in role.skills %}
+            <li>{{ point }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+          {%- assign body = role.content | strip -%}
+          {%- if body != "" %}
+          <details class="role-more">
+            <summary>{{ words.technical.read_more }}</summary>
+            <div class="role-detail">
+              {{ role.content }}
             </div>
-          </div>
+          </details>
+          {%- endif %}
+        </article>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
 
-          <div class="featured-overview">
-            <p>{{ item.overview }}</p>
-          </div>
-
-          <div class="featured-body">
-            {% if item.content %}
-              {{ item.content }}
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+  <section id="beyond-tech" class="exp-section" aria-labelledby="beyond-heading">
+    <h2 id="beyond-heading">{{ words.beyond.heading }}</h2>
+    <p class="section-intro">{{ words.beyond.text }}</p>
+    <div class="beyond-grid">
+      {%- for role in other_roles %}
+      <article class="card beyond-role">
+        <p class="beyond-type">{{ words.type_labels[role.type] | default: role.type }}</p>
+        <h3>{{ role.title }}</h3>
+        <p class="role-meta">{{ role.company }} · {{ role.location }}</p>
+        <p class="role-meta">{% include employment-date-format.html item=role %}</p>
+        <p class="beyond-overview">{{ role.overview }}</p>
+        {%- if role.learnings %}
+        <details class="role-more">
+          <summary>{{ words.beyond.gained }}</summary>
+          <ul class="role-points">
+            {%- for learning in role.learnings %}
+            <li>{{ learning }}</li>
+            {%- endfor %}
+          </ul>
+        </details>
+        {%- endif %}
+      </article>
+      {%- endfor %}
     </div>
-  </div>
+  </section>
 
-  <!-- Timeline Sidebar -->
-  <aside class="employment-sidebar" id="employmentSidebar">
-    <div class="timeline-toggle">
-      <button class="timeline-btn" id="timelineToggle">
-        📅 Employment Timeline
-        <span class="toggle-icon">▶</span>
-      </button>
-      <p class="timeline-subtext"><a href="{{ '/experience' | relative_url }}" class="skills-link">→ Explore my technical toolkit</a></p>
-    </div>
-
-    <div class="timeline-panel" id="timelinePanel">
-      <div class="timeline-list" id="timelineList">
-        {% assign all_jobs = site.employment %}
-        {% for item in all_jobs %}
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4 class="timeline-role">{{ item.title }}</h4>
-              <p class="timeline-company">{{ item.company }}</p>
-              <p class="timeline-dates">
-                {%- assign start_year = item.start_date | split: ' ' | last -%}
-                {%- assign end_year = item.end_date | split: ' ' | last -%}
-                {%- assign start_month = item.start_date | split: ' ' | first -%}
-                {%- assign end_month = item.end_date | split: ' ' | first -%}
-                {%- if start_year == end_year -%}
-                  {{ start_month }} – {{ end_month }} {{ end_year }}
-                {%- else -%}
-                  {{ item.start_date }} – {{ item.end_date }}
-                {%- endif -%}
-              </p>
-              <p class="timeline-location">📍 {{ item.location }}</p>
-              <p class="timeline-overview">{{ item.overview }}</p>
-              
-              {% if item.learnings %}
-                <div class="timeline-learnings">
-                  <details class="learnings-dropdown">
-                    <summary>What I Gained</summary>
-                    <ul>
-                      {% for learning in item.learnings %}
-                        <li>{{ learning }}</li>
-                      {% endfor %}
-                    </ul>
-                  </details>
-                </div>
-              {% endif %}
-              
-              {% if item.featured %}
-                <button class="timeline-show-more" data-job-id="{{ forloop.index }}" onclick="openTimelineModal(this)">Show More</button>
-              {% endif %}
+  <section id="projects" class="exp-section" aria-labelledby="projects-heading">
+    <div class="board">
+      <h2 id="projects-heading">{{ words.projects.heading }}</h2>
+      <p class="section-intro">{{ words.projects.text }}</p>
+      <div class="project-grid">
+        {%- for project in site.projects %}
+        <article class="project">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.what }}</p>
+          <p class="project-purpose">{{ project.purpose }}</p>
+          <details class="role-more">
+            <summary>{{ words.projects.details }}</summary>
+            <div class="role-detail">
+              {%- if project.learnings %}
+              <h4>Key learnings</h4>
+              <ul>{% for item in project.learnings %}<li>{{ item }}</li>{% endfor %}</ul>
+              {%- endif %}
+              {%- if project.challenges %}
+              <h4>Challenges</h4>
+              <ul>{% for item in project.challenges %}<li>{{ item }}</li>{% endfor %}</ul>
+              {%- endif %}
+              {%- if project.futures %}
+              <h4>What's next</h4>
+              <ul>{% for item in project.futures %}<li>{{ item }}</li>{% endfor %}</ul>
+              {%- endif %}
             </div>
-          </div>
-        {% endfor %}
+          </details>
+          <a class="more-link" href="{{ project.github_link }}" target="_blank" rel="noopener">{{ words.projects.link_text }} <span aria-hidden="true">→</span></a>
+        </article>
+        {%- endfor %}
       </div>
-      <button class="timeline-close" id="timelineClose" onclick="closeTimeline()">✕ Close Timeline</button>
     </div>
-  </aside>
+  </section>
 </div>
-</div>
-
-<!-- Modal for Full Employment Details -->
-<div id="employmentModal" class="modal" style="display: none;">
-  <div class="modal-content">
-    <span class="modal-close" onclick="closeEmploymentModal()">&times;</span>
-    <div id="modalBody"></div>
-  </div>
-</div>
-
-<script src="{{ '/assets/js/employment-timeline.js' | relative_url }}"></script>
-<link rel="stylesheet" href="{{ '/assets/css/employment-timeline.css' | relative_url }}">

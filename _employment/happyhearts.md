@@ -3,6 +3,7 @@ title: "ECE Reliever"
 company: "Happy Hearts"
 location: "Auckland"
 start_date: "March 2025"
+sort_key: "2025-03"   # year-month, used to order roles newest first
 end_date: "September 2025"
 type: "childcare"
 featured: false

@@ -3,6 +3,7 @@ title: "Software Engineer"
 company: "Lloyds Banking Group"
 location: "London"
 start_date: "July 2019"
+sort_key: "2019-07"   # year-month, used to order roles newest first
 end_date: "October 2020"
 featured: true
 overview: "Developed backend services and microservice integrations within a large-scale banking system, contributing to third-party vendor connectivity and internal tools that improved team efficiency and workflows."
