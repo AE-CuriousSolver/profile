@@ -1,6 +1,8 @@
 ---
 layout: employment
 title: Experience
+redirect_from:
+  - /projects       # old Projects page
 ---
 {%- comment -%}
   The Experience page is built from _employment/ (roles), _projects/ (projects)
