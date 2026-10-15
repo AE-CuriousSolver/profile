@@ -1,0 +1,103 @@
+# Homepage words. Edit the text here; the layout lives in _layouts/home.html.
+
+intro:
+  kicker: "Technical Consultant · System analysis and design · Backend engineering"
+  heading: "Hi, I'm Anna-Marie."
+  text: >-
+    I trained as a mechanical engineer, then spent four years building backend
+    systems at Lloyds and Starling. Now I help people understand how their
+    technology fits together, from what a product captures to what its users
+    actually see. This page is the detail behind my CV: where I've worked, how
+    I work and what I'm building.
+  status: "Open to remote contracts · AU/NZ time zones"
+
+# "count" makes the number count up when it scrolls into view; leave it out for text values
+metrics:
+  - value: "4"
+    count: 4
+    label: "years in software engineering"
+  - value: "2"
+    count: 2
+    label: "UK banks: Starling and Lloyds"
+  - value: "MEng"
+    label: "Mechanical Engineering, Cardiff"
+  - value: "UK · EU"
+    label: "working rights"
+
+how_i_work:
+  eyebrow: "How I work"
+  heading: "Translating between people and technology"
+  aside: "and I'm on your side"
+  text: >-
+    I listen first, then explain with diagrams, analogies and plain English, so
+    you understand your own systems well enough to decide with confidence.
+  # Handwritten labels on the diagram; keep each to about 3 words
+  diagram:
+    left: "You"
+    left_subtitle: "people · teams"
+    middle: "Me"
+    right: "Your tech"
+    right_subtitle: "APIs · data · cloud"
+    you_to_me: "what you need"
+    me_to_you: "plain English"
+    me_to_tech: "clear specs"
+    tech_to_me: "what's possible"
+
+experience:
+  eyebrow: "Experience highlights"
+  heading: "Recent experience"
+  link_text: "See all experience"
+  items:
+    - name: "Take In"
+      meta: "Technical Consultant · Auckland · 2026"
+      points:
+        - "Conducted a full project review across hardware, app, cloud and data"
+        - "Designed breath metrics end to end, from sensor to screen"
+        - "Helped the founders lead technical decisions with confidence"
+      tags: ["Systems design", "Data design", "Advisory"]
+    - name: "Starling Bank"
+      meta: "Software Engineer · London · 2021–2023"
+      points:
+        - "Designed Banking-as-a-Service onboarding APIs for partner clients"
+        - "Led the fraud rules engine redesign on a £143B platform"
+        - "Shaped requirements with clients, compliance and fraud investigators"
+      tags: ["API design", "Fraud systems", "Java"]
+    - name: "Lloyds Banking Group"
+      meta: "Software Engineer · London · 2019–2020"
+      points:
+        - "Built fraud detection microservices alongside a legacy monolith"
+        - "Led backend work on a custom switch service"
+        - "Built a reusable data-mapping tool that cut manual work"
+      tags: ["Microservices", "Integrations", "Spring"]
+
+skills:
+  eyebrow: "What I'm good at"
+  heading: "Skills, sketched"
+  items:
+    - sketch: api
+      title: "APIs and integrations"
+      text: "Clear contracts between systems, so every partner knows what to expect."
+    - sketch: systems
+      title: "System design"
+      text: "From the big picture down to the edge cases that break things."
+    - sketch: data
+      title: "Data that makes sense"
+      text: "From capture to calculation to what people see, with assumptions written down."
+    - sketch: docs
+      title: "Docs and diagrams"
+      text: "So a team understands its own systems without needing me."
+
+looking_for:
+  eyebrow: "What I'm looking for"
+  statement: "Contract work shaping systems and data, where the technology and the people using it need to meet."
+  # Must appear word for word in the statement; it gets a highlighter mark
+  highlight: "technology and the people"
+  points:
+    - "Multi-month contracts shaping APIs, integrations and data systems"
+    - "Technical business analysis, growing toward solutions engineering"
+    - "Short reviews helping non-technical founders see the whole picture"
+    - "Remote work in AU/NZ time zones · UK and EU working rights"
+
+contact:
+  heading: "Get in touch"
+  text: "Happy to talk about a role, a project or anything on this page."

@@ -3,58 +3,31 @@ title: "Software Engineer"
 company: "Lloyds Banking Group"
 location: "London"
 start_date: "July 2019"
+sort_key: "2019-07"   # year-month, used to order roles newest first
 end_date: "October 2020"
+type: "technical"
 featured: true
-overview: "Developed backend services and microservice integrations within a large-scale banking system, contributing to third-party vendor connectivity and internal tools that improved team efficiency and workflows."
+overview: "Backend engineer at one of the UK's Big Four banks, placed through FDM. I built fraud detection microservices and internal tools that connected newer services to a large legacy system."
 skills:
-  - "Developed and integrated microservices for fraud detection within legacy banking systems"
-  - "Led backend development of a custom switch service and dynamic data mapping application"
-  - "Worked with Spring and Spring Boot within agile engineering teams"
-  - "Supported third-party integrations into monolithic banking platforms"
-detail: "Worked across Fraud Detection and Engineering Interventions teams within Lloyds Banking Group, contributing to backend services, third-party integrations, and internal operational tooling within large-scale banking systems.
- Gained experience developing microservices alongside legacy monolithic platforms, supporting fraud-related systems, and building tools designed to improve operational workflows and system integration processes."
+  - "Built fraud detection microservices in a team of eight engineers"
+  - "Integrated new services and third-party providers with a legacy monolith"
+  - "Led backend development of a custom switch service"
+  - "Built a reusable data-mapping tool that cut manual format translation"
 ---
 
-
 ## Responsibilities
+- Developed backend services with Java, Spring and Spring Boot
+- Managed third-party service integrations into the main platform
+- Worked with engineers and stakeholders to understand integration requirements and constraints
+- Delivered within agile teams across regular release cycles
 
-**Fraud Detection Team**
-- Developed and integrated microservices supporting fraud detection workflows within legacy banking systems
-- Managed third-party service integrations into the main monolithic platform through backend service development
-- Worked with Spring and Spring Boot to support scalable backend functionality and system interoperability
-- Contributed within agile delivery teams across collaborative engineering workflows and release cycles
+## Key contributions
+- Bridged modern microservices with existing enterprise infrastructure
+- Designed internal tooling around operational flexibility and data transformation
+- Founded the Lloyds Wellbeing Hub, a space for informal check-ins and wellbeing resources
 
-**Engineering Interventions Team**
-- Led backend development of a custom switch service used to support operational interventions and workflow management
-- Built a bespoke data mapping application to support dynamic transformation and integration of system data
-- Supported internal tooling initiatives focused on improving operational processes and system reliability
-- Worked closely with engineers and stakeholders to understand integration requirements and operational constraints
-
-## Key Contributions
-
-**Legacy & Microservice Integration**
-
-Developed experience integrating modern microservices alongside large monolithic banking systems, helping bridge newer services with existing enterprise infrastructure and third-party providers.
-
-**Backend System Design**
-
-Contributed to the design and development of backend tooling focused on operational flexibility, data transformation, and maintainable service integration patterns.
-
-**Agile Engineering Environment**
-
-Built strong foundations in agile software delivery, collaborative development workflows, and enterprise engineering practices within large-scale regulated systems.
-
-## Workplace Community
-
-**The Hub Initiative:**
- Founded “The Hub”, a wellbeing-focused space designed to encourage connection, informal check-ins, and access to wellbeing resources within the workplace.
- The initiative aimed to create a more supportive and approachable environment for colleagues alongside day-to-day project work.
-
-## What I Gained
-
-- Experience developing backend services within large-scale enterprise banking environments
-- Exposure to microservice architecture and integration with legacy monolithic systems
-- Practical understanding of Spring and Spring Boot within production engineering workflows
-- Insight into operational tooling, system interoperability, and third-party integrations
-- Stronger appreciation for collaborative agile delivery and cross-team engineering practices
-- Understanding of the importance of workplace wellbeing, communication, and supportive team environments
+## What I gained
+- Working inside a large-scale, regulated enterprise system
+- Practical experience of microservices alongside legacy architecture
+- Strong foundations in agile delivery and team engineering practices
+- An appreciation of how much a supportive team environment matters

@@ -1,22 +1,20 @@
-# Professional Portfolio Configuration
+# Site configuration
 title: Anna-Marie Edeleanu
 description: >-
-  Experience, skills and projects of Anna-Marie Edeleanu, technical consultant with a background in backend engineering.
+  Experience, skills and projects of Anna-Marie Edeleanu, a technical consultant
+  with a background in backend engineering at Starling and Lloyds.
 url: "https://AE-CuriousSolver.github.io"
 baseurl: "/profile"
 permalink: /:basename
 author: "Anna-Marie Edeleanu"
-email: "edeleanu.anna@hotmail.co.uk"
-phone: 
-  nz: "+64 (0) 20476-4118"
-  uk: "+44 (0) 7515-065824"
+email: "anna.edeleanu@gmail.com"
 job_title: "Technical Consultant"
 degree: "MEng Mechanical Engineering - Cardiff University"
 
 # Links
 linkedin_url: "https://www.linkedin.com/in/anna-marie-edeleanu-6b21b1142"
 github_url: "https://github.com/AE-CuriousSolver"
-cv_file: "/assets/files/A Edeleanu CV .pdf"
+cv_file: "/assets/files/Anna-Marie-Edeleanu-CV.pdf"
 
 # Theme (layouts are all overridden; kept so GitHub Pages does not fall back to its default theme)
 theme: minima
@@ -26,15 +24,15 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Collections
+# Roles and projects are shown on the Experience page, not as pages of their own
 collections:
   employment:
-    output: true
-    permalink: /employment/:path/
+    output: false
   projects:
-    output: true
-    permalink: /projects/:path/
+    output: false
 
 # Build settings
 markdown: kramdown

@@ -1,7 +1,127 @@
 ---
 layout: default
 ---
+{%- assign home = site.data.home -%}
 
-<div class="wrap page prose">
-  {{ content }}
-</div>
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter>
+</svg>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="hero-kicker">{{ home.intro.kicker }}</p>
+    <h1>{{ home.intro.heading }}</h1>
+    <p class="hero-lede">{{ home.intro.text }}</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="{{ '/employment' | relative_url }}">View my experience</a>
+      <a class="btn" href="{{ site.cv_file | relative_url | uri_escape }}">Download CV</a>
+    </div>
+    <p class="status"><span class="status-dot" aria-hidden="true"></span>{{ home.intro.status }}</p>
+  </div>
+  <div class="portrait">
+    <div class="portrait-photo">
+      <img src="{{ '/assets/images/profile-640.jpg' | relative_url }}" alt="{{ site.author }}" width="640" height="640">
+    </div>
+    <span class="portrait-note hand" aria-hidden="true">hi!</span>
+  </div>
+</section>
+
+<section class="metrics" aria-label="At a glance">
+  <ul class="wrap metrics-list">
+    {%- for m in home.metrics %}
+    <li>
+      <strong{% if m.count %} data-count="{{ m.count }}"{% endif %}>{{ m.value }}</strong>
+      <span>{{ m.label }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="home-section wrap" id="how-i-work">
+  <div class="board">
+    <div class="board-head">
+      <div>
+        <p class="eyebrow">{{ home.how_i_work.eyebrow }}</p>
+        <h2>{{ home.how_i_work.heading }}</h2>
+      </div>
+      <p class="hand board-aside">{{ home.how_i_work.aside }}</p>
+    </div>
+    {% include how-i-work-diagram.html %}
+    <p class="board-text">{{ home.how_i_work.text }}</p>
+  </div>
+</section>
+
+<section class="home-section wrap" id="experience">
+  <p class="eyebrow">{{ home.experience.eyebrow }}</p>
+  <h2>{{ home.experience.heading }}</h2>
+  <div class="highlights">
+    {%- for job in home.experience.items %}
+    <article class="card highlight">
+      <h3>{{ job.name }}</h3>
+      <p class="highlight-meta">{{ job.meta }}</p>
+      <ul class="highlight-points">
+        {%- for point in job.points %}
+        <li>{{ point }}</li>
+        {%- endfor %}
+      </ul>
+      <ul class="chips" aria-label="Skills">
+        {%- for tag in job.tags %}
+        <li>{{ tag }}</li>
+        {%- endfor %}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+  <a class="more-link" href="{{ '/employment' | relative_url }}">{{ home.experience.link_text }} <span aria-hidden="true">→</span></a>
+</section>
+
+<section class="home-section wrap" id="skills">
+  <div class="board">
+    <p class="eyebrow">{{ home.skills.eyebrow }}</p>
+    <h2>{{ home.skills.heading }}</h2>
+    <div class="skills">
+      {%- for skill in home.skills.items %}
+      <article class="skill">
+        {% include skill-sketch.html name=skill.sketch %}
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-section wrap looking-for">
+  <div>
+    <p class="eyebrow">{{ home.looking_for.eyebrow }}</p>
+    {%- capture marked %}<mark>{{ home.looking_for.highlight }}</mark>{% endcapture %}
+    <p class="looking-statement">{{ home.looking_for.statement | replace: home.looking_for.highlight, marked }}</p>
+  </div>
+  <ul class="looking-points">
+    {%- for point in home.looking_for.points %}
+    <li><span aria-hidden="true">→</span>{{ point }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="home-section wrap" id="contact">
+  <div class="contact">
+    <div>
+      <h2>{{ home.contact.heading }}</h2>
+      <p>{{ home.contact.text }}</p>
+      <div class="ctas">
+        <a class="btn btn-light" href="{{ site.linkedin_url }}" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      </div>
+    </div>
+    <dl class="contact-rows">
+      <div><dt>Email</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+      <div><dt>LinkedIn</dt><dd><a href="{{ site.linkedin_url }}" target="_blank" rel="noopener">anna-marie-edeleanu</a></dd></div>
+      <div><dt>GitHub</dt><dd><a href="{{ site.github_url }}" target="_blank" rel="noopener">AE-CuriousSolver</a></dd></div>
+      <div><dt>CV</dt><dd><a href="{{ site.cv_file | relative_url | uri_escape }}">Download (PDF)</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+{{ content }}
+
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>

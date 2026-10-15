@@ -1,0 +1,34 @@
+# Experience page words. Roles live in _employment/, projects in _projects/.
+# The layout lives in _layouts/employment.html.
+
+intro: >-
+  Where I've worked and what I did there: technical roles first, then the
+  people-focused roles that shaped how I work, then the things I'm
+  building.
+
+technical:
+  heading: "Technical experience"
+  read_more: "Read more"
+
+beyond:
+  heading: "Beyond tech"
+  text: >-
+    Since 2023 I've worked in people-focused roles around New Zealand.
+    They taught me to read a room, explain things simply and improve the
+    systems around me.
+  gained: "What I gained"
+
+# Labels shown on each role, keyed by the "type" in its front matter
+type_labels:
+  childcare: "Education"
+  customer-service: "Customer service"
+  entertainer: "Facilitation"
+  technical: "Technical"
+
+projects:
+  heading: "Things I'm building"
+  text: >-
+    Personal projects where I practise, experiment and rebuild my backend
+    fundamentals. They're working spaces, not finished products.
+  link_text: "View on GitHub"
+  details: "Learnings and next steps"

@@ -1,0 +1,101 @@
+# About page words. Edit the text here; the layout lives in _layouts/about.html.
+
+intro: "The person behind the CV: how I think, the tools I use and what I get up to outside tech."
+
+summary:
+  heading: "About me"
+  paragraphs:
+    - >-
+      I'm an inventor at heart. When something is confusing or clunky, I can't
+      help designing something clearer. I think in systems, and I translate: I
+      work out how technology really works and how people really use it, then make
+      it make sense to the people who depend on it.
+    - >-
+      I trained as a mechanical engineer, then spent nearly four years as a
+      software engineer at Lloyds and Starling, on fraud systems and
+      Banking-as-a-Service APIs. I learned that the code was only part of what I
+      care about. The other part is the people: their behaviour, their experience
+      and how they actually use a system.
+    - >-
+      So I spent three years in New Zealand in people-focused roles, from tourism
+      operations to facilitation, and found I kept improving the systems around
+      me. Now I bring both together, working with startups on how their
+      technology, data and people fit.
+
+how_i_work:
+  heading: "How I work"
+  items:
+    - title: "Listening first"
+      text: >-
+        I start by asking how things work today and what people actually need,
+        before suggesting anything. Most problems look different once you've
+        heard from everyone involved.
+    - title: "Following it end to end"
+      text: >-
+        I follow a system across teams and tools to find where the friction
+        really sits, rather than fixing one piece in isolation.
+    - title: "Learning by doing"
+      text: >-
+        I pick up unfamiliar tools and domains quickly by getting hands-on and
+        iterating until I understand how they work underneath.
+    - title: "Honest and realistic"
+      text: >-
+        I say plainly what's done, what's missing and what a change will really
+        cost, so decisions rest on an accurate picture.
+
+toolkit:
+  heading: "Toolkit"
+  groups:
+    - label: "Languages and frameworks"
+      items: ["Java", "Spring", "Guice", "Python", "TypeScript", "JavaScript", "React"]
+    - label: "APIs and testing"
+      items: ["REST", "OpenAPI / Swagger", "Webhooks", "JUnit", "Mockito", "Contract testing"]
+    - label: "Data and cloud"
+      items: ["SQL", "PostgreSQL", "AWS"]
+    - label: "Build and run"
+      items: ["Docker", "Kubernetes", "Jenkins", "Maven", "Gradle", "Grafana", "Prometheus", "Sentry", "Instana", "Humio"]
+    - label: "Diagramming"
+      items: ["Miro", "Lucidchart", "draw.io", "FigJam"]
+    - label: "Design and collaboration"
+      items: ["Figma", "Notion", "Confluence", "Jira", "Attio", "GitHub", "Agile"]
+    - label: "AI tools"
+      items: ["Claude", "ChatGPT", "GitHub Copilot"]
+
+applied:
+  heading: "Applied experience"
+  items:
+    - title: "AI chatbot testing and training"
+      text: >-
+        Tested and trained a customer-facing AI chatbot across several versions,
+        finding where it failed and improving its answers through structured
+        feedback.
+    - title: "CRM setup for a startup"
+      text: >-
+        Set up a CRM from scratch, designing the sales pipeline and process
+        structure and connecting it with email and contacts.
+    - title: "Workflow automation"
+      text: >-
+        Built lightweight automations, from Google Sheets scripts to AI-assisted
+        workflows, to cut out repetitive manual work.
+    - title: "Documentation and onboarding"
+      text: >-
+        Turned unwritten team knowledge into onboarding guides and process docs,
+        so new staff could work independently sooner.
+
+outside:
+  heading: "Outside of tech"
+  note: "the fun bit"
+  paragraphs:
+    - >-
+      I'm creative and curious by nature. I paint, make pottery, knit and write,
+      and I'm usually sketching ideas for inventions, systems or a book. To
+      balance it out: ultra-running, scuba diving, swimming, sudoku and three
+      years exploring New Zealand.
+    - >-
+      I like making spaces clearer and kinder. I set up a wellbeing hub at
+      Lloyds, co-chaired Starling's Race and Ethnicity Network, and have
+      volunteered in dementia care, helping young people leaving care find
+      work, and at a turtle sanctuary in Costa Rica.
+    - >-
+      I'm social at heart and love bringing people together, whether that's a
+      creative workshop or an "informal" games night that turns competitive fast.

@@ -6,7 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Figtree:wght@400;500;600&family=Caveat:wght@500;600&display=swap">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% seo %}
 </head>
 <body>
@@ -21,7 +22,7 @@
       <nav aria-label="Main">
         <ul>
           <li><a href="{{ '/employment' | relative_url }}"{% if page.url contains 'employment' %} aria-current="page"{% endif %}>Experience</a></li>
-          <li><a href="{{ '/profile' | relative_url }}"{% if page.url contains 'profile' %} aria-current="page"{% endif %}>About</a></li>
+          <li><a href="{{ '/about' | relative_url }}"{% if page.url contains 'about' %} aria-current="page"{% endif %}>About</a></li>
         </ul>
       </nav>
       <a class="btn btn-small" href="{{ site.cv_file | relative_url | uri_escape }}">CV</a>
