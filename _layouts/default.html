@@ -21,7 +21,7 @@
       <nav aria-label="Main">
         <ul>
           <li><a href="{{ '/employment' | relative_url }}"{% if page.url contains 'employment' %} aria-current="page"{% endif %}>Experience</a></li>
-          <li><a href="{{ '/profile' | relative_url }}"{% if page.url contains 'profile' %} aria-current="page"{% endif %}>About</a></li>
+          <li><a href="{{ '/about' | relative_url }}"{% if page.url contains 'about' %} aria-current="page"{% endif %}>About</a></li>
         </ul>
       </nav>
       <a class="btn btn-small" href="{{ site.cv_file | relative_url | uri_escape }}">CV</a>

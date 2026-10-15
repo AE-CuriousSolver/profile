@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{%- assign about = site.data.about -%}
+
+<div class="wrap page">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <p class="page-description">{{ about.intro }}</p>
+  </header>
+
+  <section class="about-summary prose" aria-labelledby="about-summary">
+    <h2 id="about-summary">{{ about.summary.heading }}</h2>
+    {%- for paragraph in about.summary.paragraphs %}
+    <p>{{ paragraph }}</p>
+    {%- endfor %}
+  </section>
+
+  <section class="about-section" aria-labelledby="about-work">
+    <div class="board">
+      <h2 id="about-work">{{ about.how_i_work.heading }}</h2>
+      <div class="work-grid">
+        {%- for item in about.how_i_work.items %}
+        <article class="work-item">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" aria-labelledby="about-toolkit">
+    <h2 id="about-toolkit">{{ about.toolkit.heading }}</h2>
+    <dl class="toolkit">
+      {%- for group in about.toolkit.groups %}
+      <div>
+        <dt>{{ group.label }}</dt>
+        <dd>
+          <ul class="chips">
+            {%- for tool in group.items %}
+            <li>{{ tool }}</li>
+            {%- endfor %}
+          </ul>
+        </dd>
+      </div>
+      {%- endfor %}
+    </dl>
+  </section>
+
+  <section class="about-section" aria-labelledby="about-applied">
+    <h2 id="about-applied">{{ about.applied.heading }}</h2>
+    <div class="applied-grid">
+      {%- for item in about.applied.items %}
+      <article class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="about-section about-outside" aria-labelledby="about-outside">
+    <div class="outside-head">
+      <h2 id="about-outside">{{ about.outside.heading }}</h2>
+      <p class="hand outside-note" aria-hidden="true">{{ about.outside.note }}</p>
+    </div>
+    <div class="prose">
+      {%- for paragraph in about.outside.paragraphs %}
+      <p>{{ paragraph }}</p>
+      {%- endfor %}
+    </div>
+  </section>
+
+  {{ content }}
+</div>

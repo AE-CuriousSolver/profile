@@ -1,0 +1,97 @@
+# About page words. Edit the text here; the layout lives in _layouts/about.html.
+# Draft wording, merged from the old Profile and Capabilities pages until the content pass.
+
+intro: >-
+  The person behind the CV: how I work, the tools I use and what I get up to
+  outside of tech.
+
+summary:
+  heading: "About me"
+  paragraphs:
+    - >-
+      I've designed and supported backend systems in regulated, operationally
+      complex environments, mostly in Banking-as-a-Service and financial crime.
+    - >-
+      My work has focused on API development, improving workflows, and
+      understanding how technical decisions affect the teams and customers who
+      live with them. I'm most interested in the space between technical
+      systems and real-world use: simplifying complexity and designing things
+      that genuinely help the people using them every day.
+    - >-
+      Alongside my technical career, I've spent recent years travelling around
+      New Zealand and working in people-focused roles outside tech. They made
+      me more adaptable, sharpened how I communicate, and taught me to work
+      well with a very wide range of people.
+
+how_i_work:
+  heading: "How I work"
+  items:
+    - title: "Systems and workflow thinking"
+      text: >-
+        I look at how processes connect across teams and tools, find the
+        friction points, and look for ways to simplify or automate them.
+    - title: "Translating complexity"
+      text: >-
+        I break technical or ambiguous problems into clear, structured steps
+        that make sense to technical and non-technical people alike.
+    - title: "Learning by doing"
+      text: >-
+        I pick up unfamiliar tools, systems and domains quickly by getting
+        hands-on and iterating until I understand how they work underneath.
+    - title: "Sharing what I know"
+      text: >-
+        I write the documentation, guides and onboarding material that make a
+        system easier for the next person to understand and contribute to.
+
+toolkit:
+  heading: "Toolkit"
+  groups:
+    - label: "Languages and frameworks"
+      items: ["Java", "Spring", "Guice", "Python", "C++", "React", "OpenAPI / Swagger", "Webhooks"]
+    - label: "Data and cloud"
+      items: ["SQL", "Postgres", "AWS"]
+    - label: "Build and delivery"
+      items: ["Docker", "Jenkins", "Maven", "Gradle"]
+    - label: "Observability"
+      items: ["Grafana", "Sentry", "Instana", "Humio"]
+    - label: "Ways of working"
+      items: ["Jira", "Confluence", "Agile"]
+
+applied:
+  heading: "Applied experience"
+  items:
+    - title: "AI chatbot testing and training"
+      text: >-
+        Tested and trained an internal AI chatbot, finding where it failed and
+        improving its answers through structured feedback.
+    - title: "Workflow automation"
+      text: >-
+        Built lightweight automations, from Google Sheets scripts to AI-assisted
+        workflows, to cut out manual work.
+    - title: "Documentation and onboarding"
+      text: >-
+        Wrote onboarding guides, internal documentation and training material
+        across several roles.
+    - title: "Events and community"
+      text: >-
+        Organised and hosted events, from hockey club socials to creative
+        workshops.
+
+outside:
+  heading: "Outside of tech"
+  note: "the fun bit"
+  paragraphs:
+    - >-
+      I'm creative and curious by nature: painting, crafting, writing,
+      ultra-running, scuba diving and travelling independently around New
+      Zealand. I'm always sketching out ideas for inventions, systems and
+      books, balanced by swimming, sudoku and simple routines.
+    - >-
+      I like making spaces clearer, more inclusive and more sustainable. That's
+      shown up in wellbeing and inclusion work, co-chairing internal networks,
+      and volunteering in dementia care, youth support and environmental
+      projects.
+    - >-
+      I'm social at heart and love bringing people together, whether that's a
+      structured creative workshop or an "informal" games night that turns
+      competitive fast.
